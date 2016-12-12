@@ -44,7 +44,7 @@ window.appToken = '1z8nldxof2a9i6vcdkjc0d7zu';
                 userId
             },
             customText: {
-                headerText: '',
+                headerText: 'Have a question?',
                 introductionText: 'I\'m here to help you out.',
                 introAppText: '',
                 settingsText: ''
