@@ -29,4 +29,4 @@ express()
             .then(response => res.json(response))
             .catch(err => res.status(500).send(err.message));
     })
-    .listen(8003);
+    .listen(process.env.PORT || 8003);
