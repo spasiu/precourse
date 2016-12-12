@@ -42,6 +42,12 @@ window.appToken = '1z8nldxof2a9i6vcdkjc0d7zu';
             appToken,
             properties: {
                 userId
+            },
+            customText: {
+                headerText: '',
+                introductionText: 'I\'m here to help you out.',
+                introAppText: '',
+                settingsText: ''
             }
         })
         init(appToken, userId);
