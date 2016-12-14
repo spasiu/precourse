@@ -1,6 +1,6 @@
 # Math
 
-We don't need any scary math to learn JavaScript. You just need to be able to count. rather, you need to be able to program the computer to count.
+We don't need any scary math to learn JavaScript. You just need to be able to do the kind of arithmetic you learned as a little kid. Here's [a refresher](http://www.themathpage.com/arith/arithmetic.htm) in case you feel intimidated by the stuff below.
 
 ## Expressions and statements
 
