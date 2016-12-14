@@ -16,6 +16,16 @@
   max-width: 800px;
 }
 
+aside {
+    border-radius: 5px;
+    background-color: rgba(	240, 255, 255, 0.5);
+    font-size: .8em;
+    margin-bottom: .8em;
+    margin-top: .8em;
+    padding: .8em;
+    font-style: italic;
+}
+
 .markdown-body .pl-c {
   color: #969896;
 }
@@ -307,6 +317,7 @@
 
 .markdown-body code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: #b22222;
   font-size: 12px;
 }
 
@@ -552,7 +563,7 @@
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
+  /*background-color: rgba(0,0,0,0.04);*/
   border-radius: 3px;
 }
 
