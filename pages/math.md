@@ -54,7 +54,7 @@ Using the stuff we covered above, figure out how to answer these problems:
 It's entirely possible you're going to have to look up formulas or information like: _how many slices is a typical pizza divided into?_ That's part of programming.
 </aside>
 
-Write the code, then share it with someone so they can check it over for you.
+Write the code, run it, then share it with someone so they can check it over for you.
 
 ## Additional resources
 - [JavaScript: Arithmetic Operators](JavaScript: Arithmetic Operators)
