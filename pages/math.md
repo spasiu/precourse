@@ -13,17 +13,17 @@ That's expressions. Expressions are also statements. Statements are like instruc
 ## Assignment statements
 
 Another sort of statement is a statement of assignment, _i.e._ assignment statement.
-An assignment statement looks like this `const pi = 3.14`.
-What's happened is that we've **assigned** the value `3.14` to a variable, and that variable is called `pi`. Now whenever we evaluate `pi` we get `3.14`. So now we can recalculate the area of a 14" pizza by evaluating the expression `7 * 7 * pi`. We can even assign that expression to another variable `const areaOf14InchPizza = 7 * 7 * pi`. And now you can find out exactly how much pizza you'll get if you split one with two friends, `areaOf14InchPizza / 3`.
+An assignment statement looks like this `let pi = 3.14`.
+What's happened is that we've **assigned** the value `3.14` to a variable, and that variable is called `pi`. Now whenever we evaluate `pi` we get `3.14`. So now we can recalculate the area of a 14" pizza by evaluating the expression `7 * 7 * pi`. We can even assign that expression to another variable `let areaOf14InchPizza = 7 * 7 * pi`. And now you can find out exactly how much pizza you'll get if you split one with two friends, `areaOf14InchPizza / 3`.
 
-So that's how you use and assign variables. **const** _yourVariableName_ **=** _someValue_. Like `const pi = 3.14`.
+So that's how you use and assign variables. **let** _yourVariableName_ **=** _someValue_. Like `let pi = 3.14`.
 
 <aside>
-`const` stands for constant, it's the keyword we use to declare a variable. There are two other keywords for declaring variables `var` and `let`. They are inferior to `const`. If you find that statement intriguing, go find out why.
+`let` is the keyword we use to declare a variable. There are two other keywords for declaring variables `var` and `const`. Feel free to look up the differences.
 </aside>
 
 <aside>
-If you tried evaluating `const pi = 3.14` in the console, you would have seen that the console spits out `undefined`. That's because every statement in JavaScript produces some value. The value `undefined` is a kind of default non-value value. The symbolic representation of nothingness.
+If you tried evaluating `let pi = 3.14` in the console, you would have seen that the console spits out `undefined`. That's because every statement in JavaScript produces some value. The value `undefined` is a kind of default non-value value. The symbolic representation of nothingness.
 </aside>
 
 ## Mathematical operators
