@@ -30,7 +30,7 @@ const pages = fs.readdirSync(__dirname + '/pages')
         title: fileName.split('.')[0]
     }))
     .reduce((pages, page) => {
-        const doc = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${page.title}</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script><link rel="stylesheet" href="/github-markdown.css"></head><body><div class="markdown-body">${page.html}${scripts}</div></body></html>`;
+        const doc = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${page.title}</title><link rel="stylesheet" href="/github-markdown.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script></head><body><div class="markdown-body">${page.html}${scripts}</div></body></html>`;
         pages[page.title] = doc;
         return pages;
     }, {});
