@@ -15,6 +15,10 @@ let findArea = (diameter) => diameter * diameter / 4 * pi
 
 findArea(14)
 ```
+Let's enter that into the console:
+![console](/images/console-function.png)
+
+
 Nice!
 
 Let's see how many square inches per slice:
@@ -80,7 +84,7 @@ _functionName_**(**_arguments_**)**
 
 ## More explaining with words
 
-The functions we've been looking at are basically reusable expressions. When you declare a function you define its parameters between the parentheses, then when you call the function (_i.e._ use it), you pass it arguments whose values take the place of the parameters in the function definition. The function acts just like any other expression, when called it produces the value you'd expect from the body of the function. So the function `let three = () => 3` would produce the value `3` when called like so `three()`.
+The functions we've been looking at are basically reusable expressions. When you declare a function you define its parameters between the parentheses, then when you call the function (_i.e._ use it), you pass it arguments whose values take the place of the parameters in the function definition. The function acts just like any other expression when called, it produces the value you'd expect from the body of the function. So the function `let three = () => 3` would produce the value `3` when called like so `three()`.
 
 ## Something freaky
 

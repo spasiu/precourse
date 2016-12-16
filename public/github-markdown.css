@@ -6,24 +6,25 @@
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  margin: 1em;
+  max-width: 800px;
   line-height: 1.5;
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
-  padding: 4em;
-  max-width: 800px;
 }
 
 aside {
-    border-radius: 5px;
-    background-color: rgba(	240, 255, 255, 0.5);
-    font-size: .8em;
-    margin-bottom: .8em;
-    margin-top: .8em;
-    padding: .8em;
-    font-style: italic;
+  border-radius: 5px;
+  background-color: rgba(240, 255, 255, 0.5);
+  font-size: .8em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 2em;
+  padding: .5em;
+  font-style: italic;
 }
 
 .markdown-body .pl-c {
@@ -317,7 +318,6 @@ aside {
 
 .markdown-body code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  color: #b22222;
   font-size: 12px;
 }
 
@@ -563,7 +563,7 @@ aside {
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  /*background-color: rgba(0,0,0,0.04);*/
+  background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
 }
 

@@ -113,6 +113,10 @@ Think through these expressions to decide what value is produced, and then doubl
 Notice the use of parentheses _( )_ to group part of the expression?
 </aside>
 
+## Examples
+
+
+
 ## Practice
 
 Using everything we've covered thus far regarding numbers and booleans, figure out how to answer this problem in JavaScript:
