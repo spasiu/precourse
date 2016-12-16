@@ -23,25 +23,26 @@ const config = JSON.stringify({
     }
 });
 
-const scripts = `<script src="https://cdn.smooch.io/smooch.min.js"></script><script>Smooch.init(${config});</script>`;
+const scripts = `<script src="https://cdn.smooch.io/smooch.min.js"></script><script>Smooch.init(${config});</script><script>hljs.initHighlightingOnLoad();</script>`;
 const pages = fs.readdirSync(__dirname + '/pages')
     .map(fileName => ({
         html: marked(fs.readFileSync(__dirname + '/pages/' + fileName).toString()),
         title: fileName.split('.')[0]
     }))
     .reduce((pages, page) => {
-        const doc = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${page.title}</title><link rel="stylesheet" href="/github-markdown.css"></head><body><div class="markdown-body">${page.html}${scripts}</div></body></html>`;
+        const doc = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>${page.title}</title><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script><link rel="stylesheet" href="/github-markdown.css"></head><body><div class="markdown-body">${page.html}${scripts}</div></body></html>`;
         pages[page.title] = doc;
         return pages;
     }, {});
 
 express()
+    .get('/pages', (req, res) => res.send(pages.index))
     .get('/pages/:page', (req, res) => {
         const page = pages[req.params.page];
         if (page) {
             res.send(page);
         } else {
-            res.status(404).send('404 ¯\_(ツ)_/¯ not found.');
+            res.status(404).send('404 ¯\\_(ツ)_/¯ not found.');
         }
     })
     .use(express.static('public'))
