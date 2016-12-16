@@ -105,6 +105,10 @@ Think through these expressions to decide what value is produced, and then doubl
 
 - `true && false || true || false`
 
+- `true || false ? true : false`
+
+- `true && false && false || false && true ? true && false && false || false && true : 1 < 2 && 2 > 1`
+
 <aside>
 Notice the use of parentheses _( )_ to group part of the expression?
 </aside>
