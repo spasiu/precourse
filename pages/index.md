@@ -2,16 +2,16 @@
 
 ## Contents
 
-1. _[Tools](tools)_ ✅
-2. _[Math](math)_ ✅
-3. _[Functions](functions)_ ✅
-4. _[Callbacks](callbacks)_ ❌
-5. _[Booleans](booleans)_ ❌
-6. _[Recursion](recursion)_ ❌
-7. *[Data Structures](data_structures)* ❌
-8. *[More Functions](more_functions)* ❌
-9. _[Objects](objects)_ ❌
-10. _[Promises](promises)_ ❌
+1. _[Tools](/pages/tools)_ ✅
+2. _[Math](/pages/math)_ ✅
+3. _[Functions](/pages/functions)_ ✅
+4. _[Callbacks](/pages/callbacks)_ ❌
+5. _[Booleans](/pages/booleans)_ ❌
+6. _[Recursion](/pages/recursion)_ ❌
+7. *[Data Structures](/pages/data_structures)* ❌
+8. *[More Functions](/pages/more_functions)* ❌
+9. _[Objects](/pages/objects)_ ❌
+10. _[Promises](/pages/promises)_ ❌
 
 ## Are you stuck?
 
