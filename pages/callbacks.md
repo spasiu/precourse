@@ -89,6 +89,10 @@ let incrementCount = () => count = count + 1
 let interval = setInterval(incrementCount, 1000)
 ```
 
+<aside>
+Notice this `//`? That's called a comment. Comments aren't evaluated, they just let you say interesting things about your code.
+</aside>
+
 So now we have a count of the seconds since you ran that `setInterval` function.
 
 ![console](/images/console-interval.png)

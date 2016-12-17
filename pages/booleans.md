@@ -27,10 +27,6 @@ let numberOfSandwiches = numberOfGuests * 2 - numberOfPizzas * 2
 If we evaluate the above code, then evaluate `numberOfSandwiches` we'll get back `12`. If we evaluate `numberOfPizzas` we'll get back `3`.
 So if we have 12 guests, and they like pizza, then we should order 12 sandwiches and 3 pizzas.
 
-<aside>
-Notice this `//`? That's called a comment. Comments aren't evaluated, they just let you say interesting things about your code.
-</aside>
-
 What if our guests don't like pizza?
 
 ```javascript
@@ -56,14 +52,14 @@ A boolean is a data type that has two possible values, _true_ and _false_. We ca
 
 | operator | what it does | example |
 |---|---|---|
-| > | greater than | `2 > 1` |
-| < | less than | `1 < 2` |
-| >= | greater than or equal to | `2 >= 1` |
-| <= | less than or equal to | `1 <= 2` |
-| == | equal to | `2 == 2` |
-| != | not equal to | `2 != 1` |
-| === | strict equal to | `2 === 2` |
-| !== | strict not equal to | `2 !== 1` |
+| `>` | greater than | `2 > 1` |
+| `<` | less than | `1 < 2` |
+| `>=` | greater than or equal to | `2 >= 1` |
+| `<=` | less than or equal to | `1 <= 2` |
+| `==` | equal to | `2 == 2` |
+| `!=` | not equal to | `2 != 1` |
+| `===` | strict equal to | `2 === 2` |
+| `!==` | strict not equal to | `2 !== 1` |
 
 All of the examples in the table above evaluate to _true_. So `2 > 1` (2 is greater than 1) is `true`, and `2 < 1` (2 is less than 1) is `false`.
 
@@ -73,9 +69,9 @@ Booleans can be combined to produce new boolean values.
 
 | operator | what it does | example |
 |---|---|---|
-| && | AND | `true && true` |
-| \|\| | OR | `true || false` |
-| ! | NOT | `!false` |
+| `&&` | AND | `true && true` |
+| `||` | OR | `true || false` |
+| `!` | NOT | `!false` |
 
 All of the examples in the table above evaluate to _true_.
 
