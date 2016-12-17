@@ -115,10 +115,45 @@ Notice the use of parentheses _( )_ to group part of the expression?
 
 ## Examples
 
+```javascript
+// a function for saying whether a number is 0 or not
 
+let isZero = (num) => num === 0
+
+isZero(3) // false
+isZero(0) // true
+isZero() // false
+```
+
+<aside>
+Note the use of `===`. `==` is used as a comparison operator it coerces the values compared to be comparable. The practical result is that a value like `undefined` will be coerced to be `0`.
+</aside>
+
+<aside>
+If you ever forget to give an argument to a function, the parameter will be `undefined`. so calling `isZero()` like so, without an argument will result in the comparison `undefined` === `0`, which is `false`. If we had used `==`, the result would have been `true`. Just something to keep in mind.
+</aside>
+
+```javascript
+// a function to return the absolute value of a number
+
+let abs = (num) => num < 0 ? num * -1 : num
+
+abs(13) // 13
+abs(-13) // 13
+```
+
+```javascript
+// a function that takes a number and enforces a range on it
+// returning the limits of the range if the number is outside
+
+let betwixt = (num) => num > 100 ? 100 : num < 0 ? 0 : num
+
+betwixt(56) // 56
+betwixt(17) // 17
+betwixt(-39) // 0
+betwixt(176) // 100
+```
 
 ## Practice
 
-Using everything we've covered thus far regarding numbers and booleans, figure out how to answer this problem in JavaScript:
-
-- What is the greatest value for your money, a 9" pizza for $8.00, a 12" pizza for $13.00, a 14" pizza for $16.00, or a 16" pizza for $22.00.
+- In the callbacks section we modelled finances. Can you add a lottery ticket to finances by using booleans and random numbers?
