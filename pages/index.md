@@ -1,6 +1,6 @@
 # JS101
 
-**Pep talk:** _Learning to program is hard, learning a new programming language is hard, reading giant blocks of text and watching lectures is hard... You still have to do it though ;). Make sure you ask for lots of help!_
+**Pep talk:** Programming is really hard to learn, and it takes a massive effort to succeed. The good news is that you can do it! All it takes is attention to detail and hard work.
 
 ## Pre-course
 
