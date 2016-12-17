@@ -3,7 +3,7 @@ We really only need two tools to get started:
 1. [Chrome](https://www.google.com/chrome/browser/) (the browser)
 2. [Atom.io](https://atom.io/) (the text editor)
 
-You want to know how to use the console in Chrome developer tools. Here's a [helpful resource](https://developers.google.com/web/tools/chrome-devtools/console/).
+You want to know how to use the console in Chrome developer tools. Here's a [helpful resource](https://developers.google.com/web/tools/chrome-devtools/console/) (don't be scared by the more advanced parts of this tutorial, do as much as you feel comfortable doing).
 
 In Atom.io you want to install a linter. A linter tells you when you make mistakes while you're writing code. Here's what you need:
 - [How to install a package in Atom](http://flight-manual.atom.io/using-atom/sections/atom-packages/)
