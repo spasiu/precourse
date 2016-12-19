@@ -2,6 +2,8 @@
 
 First read [this](/pages/recursion-explained).
 
+I expect this module to stretch your mind and make you understand functions a little better. I don't expect you to suddenly master recursion.
+
 We know that functions can call other functions inside their body, like:
 
 ```javascript
@@ -128,7 +130,7 @@ if (years < 1) {
 
 ## Summary
 
-Recursion is awesome. In the interest of learning we've picked easy to understand examples that focus on numbers, but where it really shines is in allowing you to iterate into nested data structures something will do a lot of during our course. So it's definitely worth learning.
+Recursion is awesome. In the interest of learning we've picked easy to understand examples that focus on numbers, but where it really shines is in allowing you to iterate over nested data structures, something will do a lot of during our course. So it's definitely worth being exposed to.
 
 We've also learned to use functions with return statements, and if statements. These are powerful tools but not always better then single line functions and ternary operators (_boolean_ **?** _then_ **:** _else_). Keeping everything in a single expression makes it easier to write code without bugs (mistakes), but it also makes it harder to read.
 
