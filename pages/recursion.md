@@ -136,10 +136,7 @@ We've also learned to use functions with return statements, and if statements. T
 
 ## Break time
 
-<iframe src="https://player.vimeo.com/video/95066828?portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/95066828">Monitorama PDX 2014 - James Mickens</a> from <a href="https://vimeo.com/monitorama">Monitorama</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-This guy's just funny, and maybe you learn some stuff about Software Dev culture. Or not.
+![story time](https://media.giphy.com/media/M5KFysE4oqmLm/giphy.gif)
 
 ## More examples
 
