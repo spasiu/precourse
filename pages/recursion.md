@@ -13,16 +13,24 @@ findAreaOfSliceFromDiameter(14)
 
 In the above example we find the area of a slice of pizza based on the diameter of the pizza. Each slice of a 14" pizza holds roughly 19 square inches of pizza. We discover this by defining a function `findArea` that we call from `findAreaOfSliceFromDiameter` with the _diameter_ parameter.
 
-Recursion isn't in syntax, it's just the idea that a function will call itself. We use recursion to iterate our expression again and again, for example:
+
+
+Recursion isn't a new kind of syntax, it's just the idea that a function can call itself over and over again, until it find the answer we want it to.
+
+We do this because often we're not smart enough to solve a problem with a single expression, and because it allows us to apply a set of rules to a problem over and over again, slightly modified each time, until the problem is solved.
+
+We can use recursion to iterate through our expression again and again, for example:
 
 ```javascript
 // compound interest calculator
+// calculate compounded interest over time
 let calc = (rate, sum, time) => time > 0 ? calc(rate, sum + sum * rate, time - 1) : sum
 ```
 <aside>
 FYI you can solve this problem with a single [expression](https://qrc.depaul.edu/StudyGuide2009/Notes/Savings%20Accounts/Compound%20Interest.htm), without needing to iterate.
 I just think it's an easy to understand problem.
 </aside>
+
 
 That function was a mouthful, so lets split it into a few lines
 
@@ -118,7 +126,7 @@ if (years < 1) {
 
 </span>
 
-##Summary
+## Summary
 
 Recursion is awesome. In the interest of learning we've picked easy to understand examples that focus on numbers, but where it really shines is in allowing you to iterate into nested data structures something will do a lot of during our course. So it's definitely worth learning.
 
