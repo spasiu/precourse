@@ -4,12 +4,17 @@ First read [this](/pages/recursion-explained).
 
 I expect this module to stretch your mind and make you understand functions a little better. I don't expect you to suddenly master recursion.
 
+## Functions calling other functions
+
 We know that functions can call other functions inside their body, like:
 
 ```javascript
 let pi = 3.14
+
 let findArea = (diameter) => diameter * diameter / 4 * pi
+
 let findAreaOfSliceFromDiameter = (diameter) => findArea(diameter) / 8
+
 findAreaOfSliceFromDiameter(14)
 ```
 
@@ -39,7 +44,9 @@ That function was a mouthful, so lets split it into a few lines
 ```javascript
 // we split the expression in the function's body over three lines.
 calc = (rate, sum, time) => time > 0 ? // is time greater than 0?
+
     calc(rate, sum + sum * rate, time - 1) : // if yes, then recurse,
+
     sum // otherwise, return the sum.
 ```
 
@@ -86,7 +93,7 @@ let rabbitCalc = (years, pairs=1) => {
 }
 ```
 
-There's still something that's not quite ideal here:
+There's still something that's a bit hard to understand here:
 
 ```javascript
 return years > 1 ?
@@ -130,9 +137,9 @@ if (years < 1) {
 
 ## Summary
 
-Recursion is awesome. In the interest of learning we've picked easy to understand examples that focus on numbers, but where it really shines is in allowing you to iterate over nested data structures, something will do a lot of during our course. So it's definitely worth being exposed to.
+Recursion is awesome. In the interest of learning we've picked examples that focus on numbers because we know how to do math in JavaScript, but where recursion is really helpful is in allowing us to iterate over nested data structures, something we will do during our course. It's definitely worth being exposed to.
 
-We've also learned to use functions with return statements, and if statements. These are powerful tools but not always better then single line functions and ternary operators (_boolean_ **?** _then_ **:** _else_). Keeping everything in a single expression makes it easier to write code without bugs (mistakes), but it also makes it harder to read.
+We've also learned to use if statements, and functions with return statements. These are powerful tools. Keeping everything in a single expression makes it easier to write code without bugs (mistakes), but it also makes it harder to read and write longer functions.
 
 ## Break time
 

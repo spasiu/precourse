@@ -152,4 +152,4 @@ betwixt(176) // 100
 
 ## Practice
 
-- In the callbacks section we modelled finances. Can you add a lottery ticket to finances by using booleans and random numbers?
+- In the callbacks module we modelled finances. Can you add a lottery ticket to finances by using booleans and random numbers?
