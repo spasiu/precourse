@@ -9,7 +9,7 @@
 3. _[Functions](/pages/functions)_ ✅
 4. _[Callbacks](/pages/callbacks)_ ✅
 5. _[Booleans](/pages/booleans)_ ✅
-6. _[recursive functions](/pages/recursion)_ ✅
+6. _[Recursion](/pages/recursion)_ ✅
 7. *[Data Structures](/pages/data_structures)* ❌
 8. *[Iterators](/pages/iterators)* ❌
 9. _[Objects](/pages/objects)_ ❌
