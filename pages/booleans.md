@@ -69,9 +69,9 @@ Booleans can be combined to produce new boolean values.
 
 | operator | what it does | example |
 |---|---|---|
-| && | AND | `true && true` |
-| &#124;&#124; | OR | `true &#124;&#124; false` |
-| ! | NOT | `!false` |
+| && | AND | _true && true_ |
+| &#124;&#124; | OR | _true &#124;&#124; false_ |
+| ! | NOT | _!false_ |
 
 All of the examples in the table above evaluate to _true_.
 
