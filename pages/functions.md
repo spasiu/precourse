@@ -102,7 +102,7 @@ Fill in the bodies of these function and declare and call them in the console.
 
 - `let divide = (num1, num2) => ...`
 
-- `let square = (num1, num2) => ...`
+- `let square = (num) => ...`
 
 - `let addTen = (num) => ...`
 
@@ -125,7 +125,7 @@ Write the following functions, test them in the console, and give them to someon
 
 - write a function that takes the diameter and price of a pizza and gives you the price per square inch of pizza
 
-- write a function that takes a sum of money and a monthly interest rate, and gives the amount of money gained in interest over a single monthly
+- write a function that takes a sum of money and a monthly interest rate, and gives the amount of money gained in interest over a single month.
 
 ## Read this, even though it's not about JavaScript
 
