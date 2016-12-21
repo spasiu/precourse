@@ -22,7 +22,7 @@ In the above example we find the area of a slice of pizza based on the diameter 
 
 
 
-Recursion isn't a new kind of syntax, it's just the idea that a function can call itself over and over again, until it find the answer we want it to.
+Recursion isn't a new kind of syntax, it's just the idea that a function can call itself over and over again, until it finds the answer we want it to.
 
 We do this because often we're not smart enough to solve a problem with a single expression, and because it allows us to apply a set of rules to a problem over and over again, slightly modified each time, until the problem is solved.
 
