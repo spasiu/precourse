@@ -10,10 +10,12 @@
 4. _[Callbacks](/pages/callbacks)_ ✅
 5. _[Booleans](/pages/booleans)_ ✅
 6. _[Recursion](/pages/recursion)_ ✅
-7. *[Data Structures](/pages/data_structures)* ❌
-8. *[Iterators](/pages/iterators)* ❌
-9. _[Objects](/pages/objects)_ ❌
-10. _[Prototypes](/pages/prototypes)_ ❌
+7. _[Strings](/pages/strings)_ ✅
+8. _[Arrays](/pages/arrays)_ ❌
+9. _[Dictionaries](/pages/dictionaries)_ ❌
+10. *[Iterators](/pages/iterators)* ❌
+11. _[Objects](/pages/objects)_ ❌
+12. _[Prototypes](/pages/prototypes)_ ❌
 
 ## Suggested Resources
 

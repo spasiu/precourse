@@ -12,7 +12,7 @@ We will use the Atom.io text editor and Chrome browser during this course.
 
 - In Atom.io you want to install a linter. A linter tells you when you make mistakes while you're writing code. Here's what you need:
     1. [How to install a package in Atom](http://flight-manual.atom.io/using-atom/sections/atom-packages/)
-    2. [The linter package](https://atom.io/packages/linter-eslint)
+    2. [The linter package](https://atom.io/packages/linter)
     3. [The linter-eslint package](https://atom.io/packages/linter-eslint)
 
 ## Optional resources
