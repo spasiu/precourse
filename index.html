@@ -1,0 +1,1148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>JS101</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.highlight .err {
+  color: #272822;
+  background-color: #f92672;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #f4bf75;
+}
+.highlight .nt {
+  color: #f4bf75;
+}
+.highlight .o, .highlight .ow {
+  color: #f8f8f2;
+}
+.highlight .p, .highlight .pi {
+  color: #f8f8f2;
+}
+.highlight .gi {
+  color: #a6e22e;
+}
+.highlight .gd {
+  color: #f92672;
+}
+.highlight .gh {
+  color: #66d9ef;
+  background-color: #272822;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #ae81ff;
+}
+.highlight .kc {
+  color: #fd971f;
+}
+.highlight .kt {
+  color: #fd971f;
+}
+.highlight .kd {
+  color: #fd971f;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #a6e22e;
+}
+.highlight .sr {
+  color: #a1efe4;
+}
+.highlight .si {
+  color: #cc6633;
+}
+.highlight .se {
+  color: #cc6633;
+}
+.highlight .nn {
+  color: #f4bf75;
+}
+.highlight .nc {
+  color: #f4bf75;
+}
+.highlight .no {
+  color: #f4bf75;
+}
+.highlight .na {
+  color: #66d9ef;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: #a6e22e;
+}
+.highlight .ss {
+  color: #a6e22e;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.png" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="content">
+        <h1 id="js101-learn-to-program-with-javascript">JS101 Learn to program with JavaScript</h1>
+
+<h2 id="pep-talk">Pep talk</h2>
+
+<p>TL;DR: Programming hard. Takes work. Focus. Ask Questions. You can succeed.</p>
+
+<h2 id="suggested-resources">Suggested Resources</h2>
+
+<h3 id="free-books">Free Books</h3>
+
+<ul>
+<li><p><a href="http://jsforcats.com/">JavaScript For Cats</a> (or the <a href="https://noblemule.gitbooks.io/javascript-for-cats/content/">GitBook</a>)</p></li>
+<li><p><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&amp;%20going/README.md#you-dont-know-js-up--going">You Don&rsquo;t Know JS: Up &amp; Going</a> (part of a <a href="https://github.com/getify/You-Dont-Know-JS">great series</a>, and also has a <a href="#">video course</a>)</p></li>
+<li><p><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></p></li>
+</ul>
+
+<h3 id="videos">Videos</h3>
+
+<ul>
+<li><p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">What the heck is the event loop anyway?</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=Bv_5Zv5c-Ts">JavaScript: Understanding the Weird Parts</a></p></li>
+</ul>
+
+          <h1 id="tools">Tools</h1>
+
+<p>We will use the Atom.io text editor and Chrome browser during this course.</p>
+
+<h2 id="install-this-software">Install this software</h2>
+
+<ul>
+<li><p><a href="https://www.google.com/chrome/browser/">Chrome</a> (the browser)</p></li>
+<li><p><a href="https://atom.io/">Atom.io</a> (the text editor)</p></li>
+</ul>
+
+<h2 id="what-you-need-to-know">What you need to know</h2>
+
+<ul>
+<li><p>You want to know how to use the console in Chrome developer tools. Here&rsquo;s a <a href="https://developers.google.com/web/tools/chrome-devtools/console/">helpful resource</a>.</p></li>
+<li><p>In Atom.io you want to install a linter. A linter tells you when you make mistakes while you&rsquo;re writing code. Here&rsquo;s what you need:</p>
+
+<ol>
+<li><a href="http://flight-manual.atom.io/using-atom/sections/atom-packages/">How to install a package in Atom</a></li>
+<li><a href="https://atom.io/packages/linter">The linter package</a></li>
+<li><a href="https://atom.io/packages/linter-eslint">The linter-eslint package</a></li>
+</ol></li>
+</ul>
+
+<h2 id="optional-resources">Optional resources</h2>
+
+<ul>
+<li><p>A <a href="http://discover-devtools.codeschool.com/">free course</a> on using Chrome Dev tools (don&rsquo;t be scared by the more advanced parts of this tutorial, do as much as you feel comfortable doing)</p></li>
+<li><p>An extremely <a href="https://www.youtube.com/watch?v=WWwBQQOGllo">beginner friendly tutorial on YouTube</a> for learning how to use Atom. You&rsquo;re interested in getting to videos 10 and 11 where you learn how to install packages and linters.</p></li>
+</ul>
+
+<h2 id="introducing-repls">Introducing REPLs</h2>
+
+<p>REPL stands for Read Eval Print Loop.
+<a href="http://stackoverflow.com/a/13612824/1588728">A REPL</a> is a tool you can use to program interactively. Chrome&rsquo;s developer console is a REPL. <a href="https://repl.it/languages/javascript">Repl.it</a> is another REPL, which also lets you write scripts on the left-hand side.</p>
+
+<p>Go play with a REPL.</p>
+
+          <h1 id="numbers">Numbers</h1>
+
+<p>We don&rsquo;t need any scary math to learn JavaScript. You just need to be able to do the kind of arithmetic you learned as a little kid. Here&rsquo;s <a href="http://www.themathpage.com/arith/arithmetic.htm">a refresher</a> in case you feel intimidated by the stuff below.</p>
+
+<h2 id="expressions-and-statements">Expressions and statements</h2>
+
+<p>An expression is some piece of code which produces a value. The simplest expressions to learn involve numbers. This is an expression <code class="prettyprint">1</code>. That&rsquo;s the number one, it produces the value <code class="prettyprint">1</code>. Open up the console in Chrome. Run the expression <code class="prettyprint">1</code> and see what value you get back.</p>
+
+<p>Here&rsquo;s another expression: <code class="prettyprint">1 + 1</code>. That expression produces the value <code class="prettyprint">2</code>. Surprised? Also an expression: <code class="prettyprint">7 * 7 * 3.14</code>, which is approximately the square inches of pizza in a 14&quot; pizza. Try evaluating that expression in the console. Now you know.</p>
+
+<p>That&rsquo;s expressions. Expressions are also statements. Statements are like instructions, of which expressions are one sort.</p>
+
+<aside>
+The formula for getting the area inside a circle is <i>Pi multiplied by squared radius</i>. Pizza sizes are given in diameter, and the radius of a circle is half it&rsquo;s diameter.
+</aside>
+
+<h2 id="caveat-about-math-with-decimals-in-javascript">Caveat about math with decimals in JavaScript</h2>
+
+<p>JavaScript doesn&rsquo;t have the most accurate floating point math of all time. Don&rsquo;t worry about it, just don&rsquo;t plan your trip to the moon by rocket ship using JavaScript floating points.</p>
+
+<p><img src="images/broken-math.png" alt="broken math" /></p>
+
+<h2 id="assignment-statements">Assignment statements</h2>
+
+<p>Another sort of statement is a statement of assignment, <em>i.e.</em> assignment statement.
+An assignment statement looks like this <code class="prettyprint">let pi = 3.14</code>.
+What&rsquo;s happened is that we&rsquo;ve <strong>assigned</strong> the value <code class="prettyprint">3.14</code> to a variable, and that variable is called <code class="prettyprint">pi</code>. Now whenever we evaluate <code class="prettyprint">pi</code> we get <code class="prettyprint">3.14</code>. So now we can recalculate the area of a 14&quot; pizza by evaluating the expression <code class="prettyprint">7 * 7 * pi</code>. We can even assign that expression to another variable <code class="prettyprint">let areaOf14InchPizza = 7 * 7 * pi</code>. And now you can find out exactly how much pizza you&rsquo;ll get if you split one with two friends, <code class="prettyprint">areaOf14InchPizza / 3</code>.</p>
+
+<p>So that&rsquo;s how you use and assign variables. <strong>let</strong> <em>yourVariableName</em> <strong>=</strong> <em>someValue</em>. Like <code class="prettyprint">let pi = 3.14</code>.</p>
+
+<aside>
+<b>let</b> is the keyword we use to declare a variable. There are two other keywords for declaring variables <b>var</b> and <b>const</b>. Feel free to look up the differences.
+</aside>
+
+<aside>
+If you tried evaluating <b>let pi = 3.14</b> in the console, you would have seen that the console spits out <b>undefined</b>. That&rsquo;s because every statement in JavaScript produces some value. The value <b>undefined</b> is a kind of default non-value value. The symbolic representation of nothingness.
+</aside>
+
+<h2 id="mathematical-operators">Mathematical operators</h2>
+
+<table><thead>
+<tr>
+<th>operator</th>
+<th>what it does</th>
+<th>example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>+</td>
+<td>add</td>
+<td><code class="prettyprint">2 + 2</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>subtract</td>
+<td><code class="prettyprint">2 - 2</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>multiply</td>
+<td><code class="prettyprint">2 * 2</code></td>
+</tr>
+<tr>
+<td>/</td>
+<td>divide</td>
+<td><code class="prettyprint">2 / 2</code></td>
+</tr>
+<tr>
+<td>%</td>
+<td>modulo</td>
+<td><code class="prettyprint">2 % 2</code></td>
+</tr>
+</tbody></table>
+
+<p>Probably the only one that needs any explanation is modulo <code class="prettyprint">%</code>. Modulo gives you the remainder of a whole number division. So <code class="prettyprint">5 % 2</code> gives you <code class="prettyprint">1</code>, because the remainder of 5 divided by 2 is 1. And <code class="prettyprint">4 % 2</code> gives you <code class="prettyprint">0</code>, because the remainder of 4 divided by 2 is 0.</p>
+
+<p>It&rsquo;s worth mentioning here that the divide operator <code class="prettyprint">/</code> doesn&rsquo;t do whole number division, it gives you a decimal number so <code class="prettyprint">5 / 2</code> gives you <code class="prettyprint">2.5</code>.</p>
+
+<h2 id="practice">Practice</h2>
+
+<p>Using the stuff we covered above, figure out how to answer these problems:</p>
+
+<ul>
+<li>How many square inches in a 9&quot; pizza?</li>
+<li>How many square inches in a 14&quot; pizza?</li>
+<li>How many square inches in a 16&quot; pizza?</li>
+<li>How many square inches in a <em>rectangular</em> 14&quot; by 18&quot; pizza?</li>
+<li>How many square inches of pizza does each person get if you divide the rectangular pizza amongst 5 people?</li>
+<li>How many extra slices do you have if you divide 3 pizzas equally amongst 5 people, without splitting any of the slices?</li>
+</ul>
+
+<aside>
+It&rsquo;s entirely possible you&rsquo;re going to have to look up formulas or information like: <i>how many slices is a typical pizza divided into?</i> That&rsquo;s part of programming.
+</aside>
+
+<p>Write the code, run it, then share it with someone so they can check it over for you.</p>
+
+<h2 id="additional-resources">Additional resources</h2>
+
+<ul>
+<li><a href="JavaScript:%20Arithmetic%20Operators">JavaScript: Arithmetic Operators</a></li>
+</ul>
+
+          <h1 id="functions">Functions</h1>
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/VhokQhjl5t0" frameborder="0" allowfullscreen></iframe></p>
+
+<p>The above video is part of a series of four from Khan Academy, you&rsquo;re welcome to watch as many of them as you like, but you should at least watch this one.</p>
+
+<h2 id="functions-in-javascript">Functions in JavaScript</h2>
+
+<p>So that was about functions in math, but it&rsquo;s the same in JavaScript. Let&rsquo;s create a function that tells us what the area of a pizza is based on its diameter:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="kd">let</span> <span class="nx">findArea</span> <span class="o">=</span> <span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">diameter</span> <span class="o">*</span> <span class="nx">diameter</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="nx">pi</span>
+
+<span class="nx">findArea</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+</code></pre>
+<p>Let&rsquo;s enter that into the console:
+<img src="images/console-function.png" alt="console" /></p>
+
+<p>Nice!</p>
+
+<p>Let&rsquo;s see how many square inches per slice:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">findAreaOfSlice</span> <span class="o">=</span> <span class="p">(</span><span class="nx">area</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">area</span> <span class="o">/</span> <span class="mi">8</span>
+
+<span class="nx">findAreaOfSlice</span><span class="p">(</span><span class="nx">findArea</span><span class="p">(</span><span class="mi">14</span><span class="p">))</span>
+</code></pre>
+<p>This time we passed the result of one function to another function.</p>
+
+<p>Let&rsquo;s try including one function in another:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">findAreaOfSliceFromDiameter</span> <span class="o">=</span> <span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">findArea</span><span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">/</span> <span class="mi">8</span>
+
+<span class="nx">findAreaOfSliceFromDiameter</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+</code></pre>
+<p>As you can see they&rsquo;re just expressions, that we&rsquo;ve packaged up so that we can reuse them.</p>
+
+<p>Let&rsquo;s write a function with more then one <strong>parameter</strong>:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">findAreaOfCustomSlice</span> <span class="o">=</span> <span class="p">(</span><span class="nx">diameter</span><span class="p">,</span> <span class="nx">slices</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">findArea</span><span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">/</span> <span class="nx">slices</span>
+
+<span class="nx">findAreaOfCustomSlice</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+</code></pre>
+<p>This time we only cut the pizza in four slices instead of the normal eight. Heresy.</p>
+
+<h2 id="wtf-is-going-on-here">WTF is going on here?</h2>
+
+<p>This is a function <code class="prettyprint">(area) =&gt; area / 8</code>. This is a variable declaration <code class="prettyprint">let findAreaOfNormalPizzaSlice</code>. This is us declaring the variable and assigning the a function to it:</p>
+<pre class="highlight javascript"><code> <span class="kd">let</span> <span class="nx">findAreaOfNormalPizzaSlice</span> <span class="o">=</span> <span class="p">(</span><span class="nx">area</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">area</span> <span class="o">/</span> <span class="mi">8</span>
+</code></pre>
+<h2 id="the-anatomy-of-a-function-definition">The anatomy of a function definition</h2>
+
+<p><span style="font-size:1.5em"></p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">findAreaOfSlice</span> <span class="o">=</span> <span class="p">(</span><span class="nx">area</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">area</span> <span class="o">/</span> <span class="mi">8</span>
+</code></pre>
+<p><strong>let</strong> <em>functionName</em> <strong>=</strong> <strong>(</strong><em>parameters</em><strong>)</strong> <strong>=&gt;</strong> <em>body</em></p>
+
+<p></span></p>
+
+<h2 id="the-anatomy-of-a-function-call">The anatomy of a function call</h2>
+
+<p><span style="font-size:1.5em"></p>
+<pre class="highlight javascript"><code><span class="nx">findAreaOfSlice</span><span class="p">(</span><span class="mi">154</span><span class="p">)</span>
+</code></pre>
+<p><em>functionName</em><strong>(</strong><em>arguments</em><strong>)</strong>
+</span></p>
+
+<h2 id="more-explaining-with-words">More explaining with words</h2>
+
+<p>The functions we&rsquo;ve been looking at are basically reusable expressions. When you declare a function you define its parameters between the parentheses, then when you call the function (<em>i.e.</em> use it), you pass it arguments whose values take the place of the parameters in the function definition. The function acts just like any other expression when called, it produces the value you&rsquo;d expect from the body of the function. So the function <code class="prettyprint">let three = () =&gt; 3</code> would produce the value <code class="prettyprint">3</code> when called like so <code class="prettyprint">three()</code>.</p>
+
+<h2 id="something-freaky">Something freaky</h2>
+
+<p>You can call a function when you declare it without ever assigning it to a variable. You just wrap it in <strong>(</strong> parentheses <strong>)</strong> and then call it by adding the parentheses at the end: <code class="prettyprint">(() =&gt; 3)()</code> produces the value <code class="prettyprint">3</code>.</p>
+
+<h2 id="practice">Practice</h2>
+
+<p>Fill in the bodies of these function and declare and call them in the console.</p>
+
+<ul>
+<li><p>for example: <code class="prettyprint">let add = (num1, num2) =&gt; num1 + num2</code></p></li>
+<li><p><code class="prettyprint">let subtract = (num1, num2) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let multiply = (num1, num2) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let divide = (num1, num2) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let square = (num) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let addTen = (num) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let getArea = (diameter) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let divideByEight = (num) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let slicesPerPerson = (pizzas, people) =&gt; ...</code></p></li>
+<li><p><code class="prettyprint">let unusedSlices = (pizzas, people) =&gt; ...</code></p></li>
+</ul>
+
+<p>Write the function definition for these calls.</p>
+
+<ul>
+<li><code class="prettyprint">addOne(10)</code> produces <code class="prettyprint">11</code></li>
+<li><code class="prettyprint">multiplyBySeventeenAndAddThree(89)</code> produces <code class="prettyprint">1516</code></li>
+</ul>
+
+<p>Write the following functions, test them in the console, and give them to someone to read!</p>
+
+<ul>
+<li><p>write a function that converts the diameter of a pizza into it&rsquo;s area</p></li>
+<li><p>write a function that takes the diameter and price of a pizza and gives you the price per square inch of pizza</p></li>
+<li><p>write a function that takes a sum of money and a monthly interest rate, and gives the amount of money gained in interest over a single month.</p></li>
+</ul>
+
+<h2 id="read-this-even-though-it-39-s-not-about-javascript">Read this, even though it&rsquo;s not about JavaScript</h2>
+
+<ul>
+<li><a href="http://www.cs.utah.edu/~germain/PPS/Topics/functions.html">Functions</a></li>
+</ul>
+
+          <h1 id="callbacks">Callbacks</h1>
+
+<p>Callbacks are very simple. A callback is a function whose job is to execute when some event occurs. Here are a few use cases:</p>
+
+<ul>
+<li><p><em>I was asked to wait for the user to click on a button, and they just clicked on the button, what do I do now?</em></p></li>
+<li><p><em>I made an HTTP request to a server, and now I have the response, what do I do now?</em></p></li>
+<li><p><em>I looked for a file on disk and I just found it, what do I do now?</em></p></li>
+<li><p><em>You said to wait for 30 seconds, well 30 seconds are over, what do I so now?</em></p></li>
+</ul>
+
+<p>You define the answer to &ldquo;what do I do now?&rdquo; by declaring a callback function. A callback function is just a regular function, but you&rsquo;re passing it as an argument to another function that&rsquo;s going to decode when the best time for it to be called is.</p>
+
+<h2 id="a-few-built-in-functions">A few built-in functions</h2>
+
+<p>Before we get deeper into callbacks, lets talk about built-in functions that come with the browser. Here are a few:</p>
+
+<ul>
+<li><p><em>setInterval</em>:</p>
+
+<p><em>Takes a callback function and the a number of milliseconds as arguments and executes the callback function every x milliseconds.</em></p>
+
+<p><em><strong>Example:</strong></em> <code class="prettyprint">setInterval(() =&gt; console.log(1), 1000)</code></p></li>
+<li><p><em>setTimeout</em>:</p>
+
+<p><em>Takes a callback function and the a number of milliseconds as arguments and executes the callback once, x milliseconds after setTimeout was called.</em></p>
+
+<p><em><strong>Example:</strong></em> <code class="prettyprint">setTimeout(() =&gt; console.log(10), 10000)</code></p></li>
+<li><p><em>Math.random</em>:</p>
+
+<p><em>Takes no arguments, and returns a random number between 0 and 1 (not inclusive of 1).</em></p>
+
+<p><em><strong>Example:</strong></em> <code class="prettyprint">Math.random()</code></p></li>
+<li><p><em>Math.floor</em>:</p>
+
+<p><em>Take a number as an argument and rounds a decimal number down to a whole integer. So 1.87 becomes 1.</em></p>
+
+<p><em><strong>Example:</strong></em> <code class="prettyprint">Math.floor(Math.random() * 6)</code></p></li>
+<li><p><em>console.log</em>:</p>
+
+<p><em>Takes any number of arguments and logs them to the console.</em></p>
+
+<p><em><strong>Example:</strong></em> <code class="prettyprint">console.log(1,2,3)</code></p></li>
+<li><p><em>alert</em>:</p>
+
+<p><em>Takes an argument and opens an alert box in the browser with the argument as a message. Very annoying.</em></p>
+
+<p><em><strong>Example:</strong></em> <code class="prettyprint">alert(1)</code></p></li>
+</ul>
+
+<h2 id="an-example">An example</h2>
+
+<p>Try this in the console:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="kd">let</span> <span class="nx">incrementCount</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="kd">let</span> <span class="nx">interval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">incrementCount</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</code></pre>
+<p>After you run that in the console try checking the <code class="prettyprint">count</code> variable a few times (just evaluate <code class="prettyprint">count</code> in the console to check its value).</p>
+
+<p>You&rsquo;ll notice that count is being incremented. It&rsquo;s counting up, one second at a time.</p>
+
+<p>So let&rsquo;s look more closely at what&rsquo;s happening here:</p>
+<pre class="highlight javascript"><code><span class="c1">// we're declaring a variable called count</span>
+<span class="c1">// and assigning it the number 0 as a value.</span>
+
+<span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">// We're declaring a function, that when called</span>
+<span class="c1">// will add one to the count variable.</span>
+
+<span class="kd">let</span> <span class="nx">incrementCount</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1">// we're calling a function 'setInterval',</span>
+<span class="c1">// which takes a function and a number of milliseconds,</span>
+<span class="c1">// and then calls that function every x milliseconds.</span>
+
+<span class="kd">let</span> <span class="nx">interval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">incrementCount</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</code></pre>
+<aside>
+Notice this <b>//</b>? That&rsquo;s called a comment. Comments aren&rsquo;t evaluated, they just let you say interesting things about your code.
+</aside>
+
+<p>So now we have a count of the seconds since you ran that <code class="prettyprint">setInterval</code> function.</p>
+
+<p><img src="images/console-interval.png" alt="console" /></p>
+
+<p>OK, lets try stopping the count. There&rsquo;s another built-in function called <code class="prettyprint">clearInterval</code>. It takes an interval as an argument and stops it.</p>
+
+<p>Remember how above we assigned our setInterval call to a variable called <code class="prettyprint">interval</code>?</p>
+
+<p>We did that so we could do this:</p>
+<pre class="highlight javascript"><code><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">interval</span><span class="p">)</span>
+</code></pre>
+<p>Now if you try and check the count, you&rsquo;ll see that its not incrementing any more.</p>
+
+<h2 id="another-example">Another example</h2>
+
+<p>Let&rsquo;s model pizza consumption with time. Refresh your console and run this:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">pizzas</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="kd">let</span> <span class="nx">people</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="kd">let</span> <span class="nx">slicesPerPersonPerMinute</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="kd">let</span> <span class="nx">pretendMinute</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="kd">let</span> <span class="nx">consume</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">pizzas</span> <span class="o">=</span> <span class="nx">pizzas</span> <span class="o">-</span> <span class="nx">people</span> <span class="o">*</span> <span class="nx">slicesPerPersonPerMinute</span> <span class="o">/</span> <span class="mi">8</span>
+
+<span class="kd">let</span> <span class="nx">interval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">consume</span><span class="p">,</span> <span class="nx">pretendMinute</span><span class="p">)</span>
+</code></pre>
+<p>Once we run this code we can periodically check the value of <code class="prettyprint">pizzas</code> and watch it dwindle until it becomes negative pizza.</p>
+
+<p>Try calling <code class="prettyprint">clearInterval(interval)</code> before you get too negative pizza. We can only assume that negative pizza means people have started to eat each other.</p>
+
+<h2 id="settimeout">setTimeout</h2>
+
+<p><em>setTimeout</em> does the exact same thing as set interval, but only once.</p>
+
+<p>Let&rsquo;s run some code in the console with the <code class="prettyprint">setTimeout</code> function and another built-in function, alert.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="kd">let</span> <span class="nx">decrement</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">count</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="kd">let</span> <span class="nx">interval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">decrement</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="kd">let</span> <span class="nx">sayZero</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">count</span><span class="p">)</span>
+
+<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">sayZero</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+</code></pre>
+<h2 id="practice">Practice</h2>
+
+<p>Model personal finances with time! This is a pretty open ended exercise, and you can get as deep as you like. Go nuts. I&rsquo;d write it all in your text editor, then paste it into the console to test it.</p>
+
+<ol>
+<li>Create variables and functions that model expenses and revenue streams.</li>
+<li>Declare intervals that run your functions at a scale of 3 seconds per month.</li>
+<li>Declare an interval to log your finances every week or month.</li>
+<li>stop your model after some number of years (I chose 2).</li>
+</ol>
+
+<p>Here&rsquo;s a really lightweight example to get you started:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// months</span>
+
+<span class="kd">let</span> <span class="nx">month</span> <span class="o">=</span> <span class="mi">3000</span> <span class="c1">// milliseconds</span>
+
+<span class="kd">let</span> <span class="nx">stopTime</span> <span class="o">=</span> <span class="nx">month</span> <span class="o">*</span> <span class="mi">24</span> <span class="c1">// i.e. 2 years</span>
+
+<span class="kd">let</span> <span class="nx">balance</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1">// dollars</span>
+
+<span class="kd">let</span> <span class="nx">rent</span> <span class="o">=</span> <span class="mi">700</span> <span class="c1">// dollars</span>
+
+<span class="kd">let</span> <span class="nx">pay</span> <span class="o">=</span> <span class="mi">2000</span> <span class="c1">// dollars</span>
+
+<span class="kd">let</span> <span class="nx">payRent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">balance</span> <span class="o">=</span> <span class="nx">balance</span> <span class="o">-</span> <span class="nx">rent</span>
+
+<span class="kd">let</span> <span class="nx">getPay</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">balance</span> <span class="o">=</span> <span class="nx">balance</span> <span class="o">+</span> <span class="nx">pay</span>
+
+<span class="kd">let</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="kd">let</span> <span class="nx">showBalance</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">count</span><span class="p">,</span> <span class="nx">balance</span><span class="p">)</span>
+
+<span class="kd">let</span> <span class="nx">rentInterval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">payRent</span><span class="p">,</span> <span class="nx">month</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">payInterval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">getPay</span><span class="p">,</span> <span class="nx">month</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">incrementInterval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">increment</span><span class="p">,</span> <span class="nx">month</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">showInterval</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">showBalance</span><span class="p">,</span> <span class="nx">month</span><span class="p">)</span>
+
+<span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">rentInterval</span><span class="p">),</span> <span class="nx">stopTime</span><span class="p">)</span>
+<span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">payInterval</span><span class="p">),</span> <span class="nx">stopTime</span><span class="p">)</span>
+<span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">incrementInterval</span><span class="p">),</span> <span class="nx">stopTime</span><span class="p">)</span>
+</code></pre>
+<p>In your exercise I&rsquo;d say that you should model at least 10 different expenses. Get creative. Do the logs make sense when you run your simulation?</p>
+
+          <h1 id="booleans">Booleans</h1>
+
+<p>Numbers are a type of data. There are lots of other data types (like <em>undefined</em>). The next data type we&rsquo;ll introduce is called <strong>boolean</strong>. A boolean has two possible values, <em>true</em> and <em>false</em>.</p>
+
+<p>Try evaluating <code class="prettyprint">true</code> in the console. You&rsquo;ll get <code class="prettyprint">true</code>. Try assigning the value <code class="prettyprint">false</code> to a variable, like <code class="prettyprint">let  iHatePizza = false</code>. Then evaluate <code class="prettyprint">iHatePizza</code>, and you&rsquo;ll see that, that is completely untrue <em>i.e.</em> <code class="prettyprint">false</code>.</p>
+
+<h2 id="conditional-expressions">Conditional expressions</h2>
+
+<p>How are booleans useful to us?</p>
+
+<p>Well, there&rsquo;s a type of operator called a ternary, the ternary operator lets you write conditional expressions. Here are a couple examples of ternaries in action:
+- <code class="prettyprint">true ? 1 : 0</code> produces <code class="prettyprint">1</code>
+- <code class="prettyprint">false ? 1 : 0</code> produces <code class="prettyprint">0</code></p>
+
+<p>The structure of the conditional expression is basically:  <em>boolean</em> <strong>?</strong> <em>lefthandExpression</em> <strong>:</strong> <em>righthandExpression</em>. So like <code class="prettyprint">true ? 1 : 0</code>. the lefthand expression is evaluated if the condition is true, otherwise the righthand expression is evaluated. If we wrote it in English it would be like: <em>if condition then this expression otherwise this other expression</em>.</p>
+
+<p>We can assign the conditional expression to a variable like any other expression.</p>
+<pre class="highlight javascript"><code><span class="c1">// let's organize a party! What food do we need?</span>
+<span class="kd">let</span> <span class="nx">numberOfGuests</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="kd">let</span> <span class="nx">weLovePizza</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="kd">let</span> <span class="nx">numberOfPizzas</span> <span class="o">=</span> <span class="nx">weLovePizza</span> <span class="p">?</span> <span class="nx">numberOfGuests</span> <span class="o">/</span> <span class="mi">4</span> <span class="p">:</span> <span class="mi">0</span>
+<span class="kd">let</span> <span class="nx">numberOfSandwiches</span> <span class="o">=</span> <span class="nx">numberOfGuests</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="nx">numberOfPizzas</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre>
+<p>If we evaluate the above code, then evaluate <code class="prettyprint">numberOfSandwiches</code> we&rsquo;ll get back <code class="prettyprint">12</code>. If we evaluate <code class="prettyprint">numberOfPizzas</code> we&rsquo;ll get back <code class="prettyprint">3</code>.
+So if we have 12 guests, and they like pizza, then we should order 12 sandwiches and 3 pizzas.</p>
+
+<p>What if our guests don&rsquo;t like pizza?</p>
+<pre class="highlight javascript"><code><span class="nx">numberOfGuests</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="nx">weLovePizza</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="nx">numberOfPizzas</span> <span class="o">=</span> <span class="nx">weLovePizza</span> <span class="p">?</span> <span class="nx">numberOfGuests</span> <span class="o">/</span> <span class="mi">4</span> <span class="p">:</span> <span class="mi">0</span>
+<span class="nx">numberOfSandwiches</span> <span class="o">=</span> <span class="nx">numberOfGuests</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="nx">numberOfPizzas</span> <span class="o">*</span> <span class="mi">2</span>
+</code></pre>
+<p>Now <code class="prettyprint">numberOfPizzas</code> is <code class="prettyprint">0</code> and <code class="prettyprint">numberOfSandwiches</code> is <code class="prettyprint">24</code>.</p>
+
+<aside>
+Notice how we didn&rsquo;t use <b>let</b> in our assignment statements the second time? The <i>let</i> keyword is used to declare a variable. If that variable has already been declared, you can just re-assign the variable to another value. Try declaring a variable twice.
+</aside>
+
+<h2 id="ok-break-time">OK, break time.</h2>
+
+<p><img src="http://www.robbomb.com/wp-content/uploads/2016/10/tasks.gif" alt="Tasks" /></p>
+
+<h2 id="comparison-operators">Comparison operators</h2>
+
+<p>A boolean is a data type that has two possible values, <em>true</em> and <em>false</em>. We can use <em>comparison operators</em> to create booleans by comparing other things, like numbers.</p>
+
+<table><thead>
+<tr>
+<th>operator</th>
+<th>what it does</th>
+<th>example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">&gt;</code></td>
+<td>greater than</td>
+<td><code class="prettyprint">2 &gt; 1</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;</code></td>
+<td>less than</td>
+<td><code class="prettyprint">1 &lt; 2</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&gt;=</code></td>
+<td>greater than or equal to</td>
+<td><code class="prettyprint">2 &gt;= 1</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">&lt;=</code></td>
+<td>less than or equal to</td>
+<td><code class="prettyprint">1 &lt;= 2</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">==</code></td>
+<td>equal to</td>
+<td><code class="prettyprint">2 == 2</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">!=</code></td>
+<td>not equal to</td>
+<td><code class="prettyprint">2 != 1</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">===</code></td>
+<td>strict equal to</td>
+<td><code class="prettyprint">2 === 2</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">!==</code></td>
+<td>strict not equal to</td>
+<td><code class="prettyprint">2 !== 1</code></td>
+</tr>
+</tbody></table>
+
+<p>All of the examples in the table above evaluate to <em>true</em>. So <code class="prettyprint">2 &gt; 1</code> (2 is greater than 1) is <code class="prettyprint">true</code>, and <code class="prettyprint">2 &lt; 1</code> (2 is less than 1) is <code class="prettyprint">false</code>.</p>
+
+<h2 id="logical-operators">Logical operators</h2>
+
+<p>Booleans can be combined to produce new boolean values.</p>
+
+<table><thead>
+<tr>
+<th>operator</th>
+<th>what it does</th>
+<th>example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>AND</td>
+<td><em>true &amp;&amp; true</em></td>
+</tr>
+<tr>
+<td>&#124;&#124;</td>
+<td>OR</td>
+<td><em>true &#124;&#124; false</em></td>
+</tr>
+<tr>
+<td>!</td>
+<td>NOT</td>
+<td><em>!false</em></td>
+</tr>
+</tbody></table>
+
+<p>All of the examples in the table above evaluate to <em>true</em>.</p>
+
+<p>Boolean logic is its own thing, but here&rsquo;s a short intro:</p>
+
+<ul>
+<li><em>AND</em> means if both the left and right sides are <em>true</em>, the expression is <em>true</em> otherwise the expression is <em>false</em>.</li>
+<li><em>OR</em> means that if either or both the left and right sides are <em>true</em> the expression is <em>true</em>. If neither is <em>true</em>, the expression is <em>false</em>.</li>
+<li><em>NOT</em> negates the value so that <em>true</em> becomes <em>false</em>, and <em>false</em> becomes <em>true</em>.</li>
+</ul>
+
+<p>Of course comparison operators and logical operators are usually combined in an expression to create a boolean value, like this <code class="prettyprint">2 &gt; 1 &amp;&amp; -1 &lt; 0</code> (2 is greater than 1 and -1 is less than 0), which is <code class="prettyprint">true</code>.</p>
+
+<h2 id="exercises">Exercises</h2>
+
+<p>Think through these expressions to decide what value is produced, and then double check in the console:</p>
+
+<ul>
+<li><p><code class="prettyprint">true || false</code></p></li>
+<li><p><code class="prettyprint">false &amp;&amp; false</code></p></li>
+<li><p><code class="prettyprint">1 &lt; 2 &amp;&amp; 2 &gt; 1</code></p></li>
+<li><p><code class="prettyprint">31 &lt; 13 || 1 &lt; 2 &amp;&amp; 3 &gt; 1</code></p></li>
+<li><p><code class="prettyprint">400 &lt;= 400 &amp;&amp; 399 &lt; 400 &amp;&amp; (30 &gt; 31 || 400 &gt; 31)</code></p></li>
+<li><p><code class="prettyprint">true &amp;&amp; false &amp;&amp; false || false &amp;&amp; true</code></p></li>
+<li><p><code class="prettyprint">true &amp;&amp; false || true || false</code></p></li>
+<li><p><code class="prettyprint">true || false ? true : false</code></p></li>
+<li><p><code class="prettyprint">true &amp;&amp; false &amp;&amp; false || false &amp;&amp; true ? true &amp;&amp; false &amp;&amp; false || false &amp;&amp; true : 1 &lt; 2 &amp;&amp; 2 &gt; 1</code></p></li>
+</ul>
+
+<aside>
+Notice the use of parentheses <i>( )</i> to group part of the expression?
+</aside>
+
+<h2 id="examples">Examples</h2>
+<pre class="highlight javascript"><code><span class="c1">// a function for saying whether a number is 0 or not</span>
+
+<span class="kd">let</span> <span class="nx">isZero</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">num</span> <span class="o">===</span> <span class="mi">0</span>
+
+<span class="nx">isZero</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// false</span>
+<span class="nx">isZero</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">// true</span>
+<span class="nx">isZero</span><span class="p">()</span> <span class="c1">// false</span>
+</code></pre>
+<aside>
+Note the use of <b>===</b>. <b>==</b> is used as a comparison operator it coerces the values compared to be comparable. The practical result is that a value like <b>undefined</b> will be coerced to be <b>0</b>.
+</aside>
+
+<aside>
+If you ever forget to give an argument to a function, the parameter will be <b>undefined</b>. so calling <b>isZero()</b> like so, without an argument will result in the comparison <b>undefined === 0</b>, which is <b>false</b>. If we had used <b>==</b>, the result would have been <b>true</b>. Just something to keep in mind.
+</aside>
+<pre class="highlight javascript"><code><span class="c1">// a function to return the absolute value of a number</span>
+
+<span class="kd">let</span> <span class="nx">abs</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">num</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="nx">num</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span> <span class="p">:</span> <span class="nx">num</span>
+
+<span class="nx">abs</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span> <span class="c1">// 13</span>
+<span class="nx">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">13</span><span class="p">)</span> <span class="c1">// 13</span>
+</code></pre><pre class="highlight javascript"><code><span class="c1">// a function that takes a number and enforces a range on it</span>
+<span class="c1">// returning the limits of the range if the number is outside</span>
+
+<span class="kd">let</span> <span class="nx">betwixt</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">num</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="p">?</span> <span class="mi">100</span> <span class="p">:</span> <span class="nx">num</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="mi">0</span> <span class="p">:</span> <span class="nx">num</span>
+
+<span class="nx">betwixt</span><span class="p">(</span><span class="mi">56</span><span class="p">)</span> <span class="c1">// 56</span>
+<span class="nx">betwixt</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="c1">// 17</span>
+<span class="nx">betwixt</span><span class="p">(</span><span class="o">-</span><span class="mi">39</span><span class="p">)</span> <span class="c1">// 0</span>
+<span class="nx">betwixt</span><span class="p">(</span><span class="mi">176</span><span class="p">)</span> <span class="c1">// 100</span>
+</code></pre>
+<h2 id="practice">Practice</h2>
+
+<ul>
+<li>In the callbacks module we modelled finances. Can you add a lottery ticket to finances by using booleans and random numbers?</li>
+</ul>
+
+          <h1 id="recursive-functions">Recursive functions</h1>
+
+<p>First read <a href="/pages/recursion-explained">this</a>.</p>
+
+<p>I expect this module to stretch your mind and make you understand functions a little better. I don&rsquo;t expect you to suddenly master recursion.</p>
+
+<h2 id="functions-calling-other-functions">Functions calling other functions</h2>
+
+<p>We know that functions can call other functions inside their body, like:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="kd">let</span> <span class="nx">findArea</span> <span class="o">=</span> <span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">diameter</span> <span class="o">*</span> <span class="nx">diameter</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="nx">pi</span>
+
+<span class="kd">let</span> <span class="nx">findAreaOfSliceFromDiameter</span> <span class="o">=</span> <span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">findArea</span><span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">/</span> <span class="mi">8</span>
+
+<span class="nx">findAreaOfSliceFromDiameter</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+</code></pre>
+<p>In the above example we find the area of a slice of pizza based on the diameter of the pizza. Each slice of a 14&quot; pizza holds roughly 19 square inches of pizza. We discover this by defining a function <code class="prettyprint">findArea</code> that we call from <code class="prettyprint">findAreaOfSliceFromDiameter</code> with the <em>diameter</em> parameter.</p>
+
+<p>Recursion isn&rsquo;t a new kind of syntax, it&rsquo;s just the idea that a function can call itself over and over again, until it finds the answer we want it to.</p>
+
+<p>We do this because often we&rsquo;re not smart enough to solve a problem with a single expression, and because it allows us to apply a set of rules to a problem over and over again, slightly modified each time, until the problem is solved.</p>
+
+<p>We can use recursion to iterate through our expression again and again, for example:</p>
+<pre class="highlight javascript"><code><span class="c1">// compound interest calculator</span>
+<span class="c1">// calculate compounded interest over time</span>
+<span class="kd">let</span> <span class="nx">calc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">rate</span><span class="p">,</span> <span class="nx">sum</span><span class="p">,</span> <span class="nx">time</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">time</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="nx">calc</span><span class="p">(</span><span class="nx">rate</span><span class="p">,</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">sum</span> <span class="o">*</span> <span class="nx">rate</span><span class="p">,</span> <span class="nx">time</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="nx">sum</span>
+</code></pre>
+<aside>
+FYI you can solve this problem with a single <a href="https://qrc.depaul.edu/StudyGuide2009/Notes/Savings%20Accounts/Compound%20Interest.htm">expression</a>, without needing to iterate.
+I just think it&rsquo;s an easy to understand problem.
+</aside>
+
+<p>That function was a mouthful, so lets split it into a few lines</p>
+<pre class="highlight javascript"><code><span class="c1">// we split the expression in the function's body over three lines.</span>
+<span class="nx">calc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">rate</span><span class="p">,</span> <span class="nx">sum</span><span class="p">,</span> <span class="nx">time</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">time</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="c1">// is time greater than 0?</span>
+
+    <span class="nx">calc</span><span class="p">(</span><span class="nx">rate</span><span class="p">,</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">sum</span> <span class="o">*</span> <span class="nx">rate</span><span class="p">,</span> <span class="nx">time</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="c1">// if yes, then recurse,</span>
+
+    <span class="nx">sum</span> <span class="c1">// otherwise, return the sum.</span>
+</code></pre>
+<p>So what&rsquo;s happening?</p>
+
+<p>We declare <code class="prettyprint">calc</code> with three parameters, the interest rate for a period (<em>rate</em>), the starting sum (<em>sum</em>), and the number of periods to compound (<em>time</em>). We check if time is zero, and if it is we return the sum we have calculated thus far. If time is greater then zero, we iterate again, adding the interest to the sum, and reducing the time left by 1.</p>
+
+<h2 id="another-example-rabbits">Another example, rabbits</h2>
+
+<p>Let us assume that a single pair of rabbits, in the wild, can produce 25 breeding pairs of rabbits in a single year (even with high mortality, old age, and predation). We want to figure out how many pairs of rabbits there are after X years.</p>
+
+<p>That seems like a lot of stuff to pack into one function. Good thing we can actually write functions with statements inside of them!</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">rabbitCalc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">years</span><span class="p">,</span> <span class="nx">pairs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// function body</span>
+<span class="p">}</span>
+</code></pre>
+<p>We just introduced a couple new things here:</p>
+
+<ol>
+<li><p><code class="prettyprint">pairs=1</code>: We defined a function parameter called <em>pairs</em>, but we said that it equals <em>1</em>. We&rsquo;ve given the second parameter of our function a default value of <code class="prettyprint">1</code>. So now we can call <code class="prettyprint">rabbitCalc(10)</code>, and it will be like calling <code class="prettyprint">rabbitCalc(10, 1)</code>, but we can override the default value by calling <code class="prettyprint">rabbitCalc(10, 2)</code> so now pairs is <code class="prettyprint">2</code> instead of the default <code class="prettyprint">1</code>.</p></li>
+<li><p>We used these things <strong>{</strong> <strong>}</strong> to define the body of our function. Now our function does whatever we tell it to between those <em>curly brackets</em>. We can write multiple statements, and when we&rsquo;re ready for our function to return a value, we just use the key word, <code class="prettyprint">return</code>.</p></li>
+</ol>
+
+<p>Here&rsquo;s how to use that fancy new function body with a <em>return</em> statement.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">rabbitCalc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">years</span><span class="p">,</span> <span class="nx">pairs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">nextGeneration</span> <span class="o">=</span> <span class="nx">pairs</span> <span class="o">*</span> <span class="mi">25</span>
+
+    <span class="k">return</span> <span class="nx">nextGeneration</span>
+<span class="p">}</span>
+</code></pre>
+<p>OK, so we&rsquo;re just calculating a single generation of rabbits right now. Let&rsquo;s add the recursion part.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">rabbitCalc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">years</span><span class="p">,</span> <span class="nx">pairs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">generation</span> <span class="o">=</span> <span class="nx">pairs</span> <span class="o">*</span> <span class="mi">25</span>
+    <span class="k">return</span> <span class="nx">years</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">?</span>
+        <span class="nx">rabbitCalc</span><span class="p">(</span><span class="nx">years</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">generation</span><span class="p">)</span> <span class="p">:</span>
+        <span class="nx">generation</span>
+<span class="p">}</span>
+</code></pre>
+<p>There&rsquo;s still something that&rsquo;s a bit hard to understand here:</p>
+<pre class="highlight javascript"><code><span class="k">return</span> <span class="nx">years</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">?</span>
+    <span class="nx">rabbitCalc</span><span class="p">(</span><span class="nx">years</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">generation</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nx">generation</span>
+</code></pre>
+<p>Let&rsquo;s introduce another kind of statement called <code class="prettyprint">if</code>.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">rabbitCalc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">years</span><span class="p">,</span> <span class="nx">pairs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">years</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">pairs</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">rabbitCalc</span><span class="p">(</span><span class="nx">years</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">pairs</span> <span class="o">*</span> <span class="mi">25</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<p>A couple things to understand here:</p>
+
+<ol>
+<li><p>The <em>if</em> statement uses curly brackets again to execute everything in its body <strong>{</strong> <strong>}</strong> if the boolean in the parentheses <strong>(</strong> <strong>)</strong> is <em>true</em>.</p></li>
+<li><p><code class="prettyprint">return</code> only happens once per function call, so if the <em>return</em> statement inside the <em>if</em> statement executes, then the function is over, and it never looks for the 2nd <em>return</em> statement below.</p></li>
+</ol>
+
+<h2 id="the-anatomy-of-an-if-statement">The anatomy of an if statement</h2>
+
+<p><span style="font-size:1.5em"></p>
+<pre class="highlight javascript"><code><span class="k">if</span> <span class="p">(</span><span class="nx">years</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">pairs</span>
+<span class="p">}</span>
+</code></pre>
+<p><strong>if</strong> <strong>(</strong><em>boolean</em><strong>)</strong> <strong>{</strong><br>
+<span style="margin-left:2em;"><em>body</em></span><br>
+<strong>}</strong></p>
+
+<p></span></p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Recursion is awesome. In the interest of learning we&rsquo;ve picked examples that focus on numbers because we know how to do math in JavaScript, but where recursion is really helpful is in allowing us to iterate over nested data structures, something we will do during our course. It&rsquo;s definitely worth being exposed to.</p>
+
+<p>We&rsquo;ve also learned to use if statements, and functions with return statements. These are powerful tools. Keeping everything in a single expression makes it easier to write code without bugs (mistakes), but it also makes it harder to read and write longer functions.</p>
+
+<h2 id="break-time">Break time</h2>
+
+<p><img src="https://media.giphy.com/media/M5KFysE4oqmLm/giphy.gif" alt="story time" /></p>
+
+<h2 id="more-examples">More examples</h2>
+<pre class="highlight javascript"><code><span class="c1">// positive powers</span>
+<span class="kd">let</span> <span class="nx">toPowerOf</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">,</span> <span class="nx">power</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">power</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span>
+    <span class="nx">toPowerOf</span><span class="p">(</span><span class="nx">num</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">power</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+    <span class="nx">num</span>
+
+<span class="c1">// FYI you can just do power like this:</span>
+<span class="mi">1</span><span class="nx">e5</span> <span class="c1">// one to the power of five</span>
+</code></pre><pre class="highlight javascript"><code><span class="c1">// factorial</span>
+<span class="kd">let</span> <span class="nx">fact</span> <span class="o">=</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">?</span> <span class="nx">n</span> <span class="o">*</span> <span class="nx">fact</span><span class="p">(</span><span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">:</span> <span class="mi">1</span>
+</code></pre><pre class="highlight javascript"><code><span class="c1">// compute dimensions</span>
+<span class="kd">let</span> <span class="nx">dims</span> <span class="o">=</span> <span class="p">(</span><span class="nx">number</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">,</span> <span class="nx">value</span><span class="o">=</span><span class="nx">number</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">dimensions</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">dimensions</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">value</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">dims</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span> <span class="nx">dimensions</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">value</span> <span class="o">*</span> <span class="nx">number</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// FYI you can just do dimensions like this:</span>
+<span class="mi">2</span><span class="o">**</span><span class="mi">2</span> <span class="c1">// two squared</span>
+</code></pre>
+<p>Oh hey, this one isn&rsquo;t recursive at all, because you need a break:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">findAreaOfSliceFromDiameter</span> <span class="o">=</span> <span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+    <span class="kd">let</span> <span class="nx">findArea</span> <span class="o">=</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">d</span> <span class="o">*</span> <span class="nx">d</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="nx">pi</span>
+    <span class="k">return</span> <span class="nx">findArea</span><span class="p">(</span><span class="nx">diameter</span><span class="p">)</span> <span class="o">/</span> <span class="mi">8</span>
+<span class="p">}</span>
+</code></pre>
+<p>Study that last one, it&rsquo;s not recursive, but does it make sense to you?
+We nested a function declaration inside another function, neat huh?
+How about the names of the parameters in the nested function? Does that clarify the way that parameters work?</p>
+
+<h2 id="practice">Practice</h2>
+
+<ol>
+<li><p>Rewrite this:
+<code class="prettyprint">javascript
+let calc = (rate, sum, time) =&gt; time &gt; 0 ? calc(rate, sum + sum * rate, time - 1) : sum
+</code>
+As a multi-statement function, with <em>if</em> statements instead of a ternary operator (<em>boolean</em> <strong>?</strong> <em>then</em> <strong>:</strong> <em>else</em>).</p></li>
+<li><p>Rewrite all the functions you have previously seen and written in our other homework using the new syntax.</p>
+
+<p>For example:
+<code class="prettyprint">javascript
+let f = (x) =&gt; x + 1
+</code>
+becomes:
+<code class="prettyprint">javascript
+let f = (x) =&gt; {
+    return x + 1
+}
+</code></p></li>
+<li><p>Think up your own recursive function. It doesn&rsquo;t have to be amazing. Write it in any syntax you like.</p></li>
+</ol>
+
+          <p>So far we&rsquo;ve discovered three data types:
+- Numbers
+- Booleans
+- Functions</p>
+
+<p>Now we&rsquo;re going to learn about three more:
+- Strings
+- Arrays
+- Objects</p>
+
+<p>These new types are extremely data rich and can contain massive amounts of information that can be organized into complex structures&hellip; and even human readable text ;)</p>
+
+<h1 id="strings">Strings</h1>
+
+<p>Strings are sequences of characters. Characters are things like the letters of the alphabets, punctuation, and numbers across many human languages.</p>
+
+<p>There are three ways to define strings in JavaScript:</p>
+<pre class="highlight javascript"><code><span class="c1">// double quotes</span>
+<span class="s2">"I am a string."</span>
+
+<span class="c1">// single quotes</span>
+<span class="s1">'I am a string.'</span>
+
+<span class="c1">// backticks</span>
+<span class="s2">`I am a string.`</span>
+</code></pre>
+<p>I mention this because you&rsquo;ll see examples of people using all three methods on the Web. However, the best one is&hellip;</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">theBestString</span> <span class="o">=</span> <span class="s2">`is declared with backticks`</span>
+</code></pre>
+<p>Why? because these backtick strings have a super power called, interpolation. Interpolation is a way of inserting strings into your strings. To interpolate a string you use this syntax <code class="prettyprint">${}</code>.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="kd">let</span> <span class="nx">diam</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="kd">let</span> <span class="nx">rad</span> <span class="o">=</span> <span class="nx">diam</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="c1">// declare a string</span>
+<span class="kd">let</span> <span class="nx">intro</span> <span class="o">=</span> <span class="s2">`The area of a circle is πr^2.`</span>
+
+<span class="c1">// declare a string with interpolations</span>
+<span class="kd">let</span> <span class="nx">example</span> <span class="o">=</span> <span class="s2">`So a </span><span class="p">${</span><span class="nx">diam</span><span class="p">}</span><span class="s2">" pizza has an area of </span><span class="p">${</span><span class="nx">pi</span> <span class="o">*</span> <span class="nx">rad</span> <span class="o">*</span> <span class="nx">rad</span><span class="p">}</span><span class="s2">".`</span>
+
+<span class="c1">// concatenate strings with +</span>
+<span class="kd">let</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">intro</span> <span class="o">+</span> <span class="s2">` `</span> <span class="o">+</span> <span class="nx">example</span>
+
+<span class="c1">// log a string</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span>
+</code></pre>
+<p>There&rsquo;s so much happening right now! We&rsquo;re <strong>interpolating</strong> numbers into our strings, the numbers are being automagically <strong>coerced</strong> into string data, then we&rsquo;re taking the two strings we&rsquo;ve built and <strong>concatenating</strong> them with another string that&rsquo;s just an empty space using the mathematical <strong>+</strong> operator. Lastly, we&rsquo;re calling a built-in function called <code class="prettyprint">console.log</code> and it&rsquo;s showing our string.</p>
+
+<p><em><strong>The area of a circle is πr^2. So a 14&quot; pizza has an area of 153.86&quot;.</strong></em>
+<img src="https://media.giphy.com/media/Gd9vJCodapGpi/giphy.gif" alt="Giphy" /></p>
+
+<aside>
+<i>Concatenating</i> is adding sequences together to make longer sequences. In the case of strings, we can concatenate <b>&lsquo;Hi&rsquo;</b> and <b>&rsquo;,&rsquo;</b> and <b>&rsquo; &rsquo;</b> and <b>'Bob&rsquo;</b> to make the string <b>'Hi, Bob&rsquo;</b>.
+</aside>
+
+<aside>
+<i>Coercing</i> in the JavaScript context, is when one data type is changed into another. In this case JavaScript is implicitly coercing our numbers into strings because we&rsquo;re interpolating them and it wants to be helpful. That&rsquo;s nice, but it might backfire if we wanted to do something like add <b>'2&rsquo; + 2</b> and we got the concatenated <b>'22&rsquo;</b>, because one of them was a string.
+</aside>
+
+<h2 id="substrings">Substrings</h2>
+
+<p>We can access a single character of a string, by using bracket syntax <strong>[</strong> <strong>]</strong>. Bracket syntax lets us access a character by its index in the string, like so <code class="prettyprint">text[0]</code>. Strings are indexed from 0, so the first character in a string is character at index 0.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">`The area of a circle is πr^2.`</span>
+
+<span class="kd">let</span> <span class="nx">firstChar</span> <span class="o">=</span> <span class="nx">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// `T`</span>
+<span class="kd">let</span> <span class="nx">fourthChar</span> <span class="o">=</span> <span class="nx">text</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1">// ` `</span>
+<span class="kd">let</span> <span class="nx">twentyEighthChar</span> <span class="o">=</span> <span class="nx">text</span><span class="p">[</span><span class="mi">28</span><span class="p">]</span> <span class="c1">// `.`</span>
+</code></pre>
+<p>These substrings are no different from any other string, they&rsquo;re just a string of one character.</p>
+
+<h2 id="immutability">Immutability</h2>
+
+<p>It&rsquo;s worth noting that strings cannot be modified. That is to say, you can combine strings into new strings, and you can redeclare variables with new strings, but you can&rsquo;t change the value of a string piecmeal.</p>
+
+<p>So this doesn&rsquo;t work:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">`The area of a circle is πr^2.`</span>
+
+<span class="c1">// set the first character of the string to lowercase</span>
+<span class="nx">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">`t`</span>
+</code></pre>
+<p>You have to do this instead:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">`The area of a circle is πr^2.`</span>
+
+<span class="c1">// redefine the value of text</span>
+<span class="nx">text</span> <span class="o">=</span> <span class="s2">`the area of a circle is πr^2.`</span>
+
+<span class="c1">// or create a new variable</span>
+<span class="kd">let</span> <span class="nx">lowerCased</span> <span class="o">=</span> <span class="s2">`the area of a circle is πr^2.`</span>
+</code></pre>
+<h2 id="comparing-strings">Comparing Strings</h2>
+
+<p>Quick note, we can compare equality in strings to produce booleans, just like we did with numbers. In the example below <code class="prettyprint">hasSameName</code> holds the value <code class="prettyprint">true</code>.</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">person1</span> <span class="o">=</span> <span class="s2">`Mike`</span>
+<span class="kd">let</span> <span class="nx">person2</span> <span class="o">=</span> <span class="s2">`Mike`</span>
+<span class="kd">let</span> <span class="nx">hasSameName</span> <span class="o">=</span> <span class="nx">person1</span> <span class="o">===</span> <span class="nx">person2</span>
+</code></pre>
+<h2 id="an-example">An Example</h2>
+
+<p>Lets write a function that returns <code class="prettyprint">true</code> if a string starts with a numeric character, and <code class="prettyprint">false</code> otherwise:</p>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">startsWithnumber</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span> <span class="o">===</span> <span class="s1">'0'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'1'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'2'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'3'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'4'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'5'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'6'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'7'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'8'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">'9'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">false</span>
+<span class="p">}</span>
+
+<span class="nx">startsWithnumber</span><span class="p">(</span><span class="s1">'Pizza'</span><span class="p">)</span> <span class="c1">// false</span>
+
+<span class="nx">startsWithnumber</span><span class="p">(</span><span class="s1">'14" Pizza'</span><span class="p">)</span> <span class="c1">// true</span>
+</code></pre>
+<p>That was long&hellip; We&rsquo;ll look at more concise ways to do this sort of thing later.</p>
+
+<h2 id="another-example">Another Example</h2>
+<pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">isString</span> <span class="o">=</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'string'</span>
+
+<span class="nx">isString</span><span class="p">(</span><span class="s2">`I'm a string!`</span><span class="p">)</span> <span class="c1">// true</span>
+
+<span class="nx">isString</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">// false</span>
+</code></pre>
+<aside>
+<b>typeof</b> is a built in function you haven&rsquo;t encountered before. You use it like this:
+<b>typeof('some string&rsquo;)</b> produces the value <b>'string&rsquo;</b>, and <b>typeof(3)</b> produces the value <b>'number&rsquo;</b>, and <b>typeof(true)</b> produces the value <b>'boolean&rsquo;</b>.
+<b>typeof</b> produces a string that tells you the type of the value you&rsquo;re asking about.
+</aside>
+
+<h2 id="exercises">Exercises</h2>
+
+<ol>
+<li><p>Compose a letter to Santa. Here&rsquo;s a template. Define the missing strings as variables:</p>
+
+<p><code class="prettyprint">let holiday</code></p>
+
+<p><code class="prettyprint">let adjective</code></p>
+
+<p><code class="prettyprint">let stuffINeed</code></p>
+
+<p><code class="prettyprint">let name</code></p>
+
+<p><code class="prettyprint">let letterToSanta = `Dear Santa, this year for ${holiday}, I want to become a totally ${adjective} JavaScript coder. I know it will take lots of hard work and focus and I just ask that you give me ${stuffINeed} that I need to succeed in the new year.\nLove, ${name}.</code>`</p></li>
+<li><p>Compose a sensible message that makes use of the following strings and interpolates them into the final product:</p>
+
+<p><code class="prettyprint">let numberOfBears = 3</code></p>
+
+<p><code class="prettyprint">let hero = &#39;Goldilocks&#39;</code></p>
+
+<p><code class="prettyprint">let food = &#39;porridge&#39;</code></p></li>
+<li><p>Write a function that returns <code class="prettyprint">true</code> if a string starts with an uppercase letter, and <code class="prettyprint">false</code> otherwise.</p></li>
+<li><p>Write a function <code class="prettyprint">isNumber</code> that returns true if the argument passed to it is a number, and false otherwise.</p></li>
+</ol>
+
+<h2 id="have-a-nap">Have a nap</h2>
+
+<p>Then go learn about <strong>arrays</strong>!</p>
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/kCpjgl2baLs" frameborder="0" allowfullscreen></iframe></p>
+
+          <h1 id="arrays">Arrays</h1>
+
+<p>Coming soon&hellip;</p>
+
+          <h1 id="dictionaries">Dictionaries</h1>
+
+<p>Coming soon&hellip;</p>
+
+          <h1 id="iterators">Iterators</h1>
+
+<p>Coming soon&hellip;</p>
+
+          <h1 id="objects">Objects</h1>
+
+<p>Coming soon&hellip;</p>
+
+          <h1 id="prototypes">Prototypes</h1>
+
+<p>Coming soon&hellip;</p>
+
+      </div>
+    </div>
+  </body>
+</html>
