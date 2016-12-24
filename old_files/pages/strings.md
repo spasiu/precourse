@@ -10,7 +10,7 @@ Now we're going to learn about three more:
 
 These new types are extremely data rich and can contain massive amounts of information that can be organized into complex structures... and even human readable text ;)
 
-## Strings
+# Strings
 
 Strings are sequences of characters. Characters are things like the letters of the alphabets, punctuation, and numbers across many human languages.
 
@@ -61,7 +61,7 @@ _**The area of a circle is πr^2. So a 14" pizza has an area of 153.86".**_
 **Coercing**, in the JavaScript context, is when one data type is changed into another. In this case JavaScript is implicitly coercing our numbers into strings because we're interpolating them and it wants to be helpful. That's nice, but it might backfire if we wanted to do something like add `'2' + 2` and we got the concatenated `'22'`, because one of them was a string.
 </aside>
 
-#### Substrings
+## Substrings
 
 We can access a single character of a string, by using bracket syntax **[** **]**. Bracket syntax lets us access a character by its index in the string, like so `text[0]`. Strings are indexed from 0, so the first character in a string is character at index 0.
 
@@ -75,7 +75,7 @@ let twentyEighthChar = text[28] // `.`
 
 These substrings are no different from any other string, they're just a string of one character.
 
-#### Immutability
+## Immutability
 
 It's worth noting that strings cannot be modified. That is to say, you can combine strings into new strings, and you can redeclare variables with new strings, but you can't change the value of a string piecmeal.
 
@@ -100,7 +100,7 @@ text = `the area of a circle is πr^2.`
 let lowerCased = `the area of a circle is πr^2.`
 ```
 
-#### Comparing Strings
+## Comparing Strings
 
 Quick note, we can compare equality in strings to produce booleans, just like we did with numbers. In the example below `hasSameName` holds the value `true`.
 
@@ -110,7 +110,7 @@ let person2 = `Mike`
 let hasSameName = person1 === person2
 ```
 
-#### An Example
+## An Example
 
 Lets write a function that returns `true` if a string starts with a numeric character, and `false` otherwise:
 
@@ -165,7 +165,7 @@ startsWithnumber('14" Pizza') // true
 ```
 That was long... We'll look at more concise ways to do this sort of thing later.
 
-#### Another Example
+## Another Example
 
 ```javascript
 let isString = (value) => typeof(value) === 'string'
@@ -181,7 +181,7 @@ isString(3) // false
 **typeof** produces a string that tells you the type of the value you're asking about.
 </aside>
 
-#### Exercises
+## Exercises
 
 1. Compose a letter to Santa. Here's a template. Define the missing strings as variables:
 
@@ -206,7 +206,7 @@ isString(3) // false
 
 4. Write a function `isNumber` that returns true if the argument passed to it is a number, and false otherwise.
 
-### Have a nap
+## Have a nap
 
 Then go learn about [Arrays](/pages/arrays)!
 

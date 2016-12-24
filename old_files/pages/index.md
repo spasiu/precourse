@@ -1,6 +1,6 @@
 # JS101
 
-**Pep talk:** Programming is really hard to learn, and it takes a massive effort to succeed. The good news is that you can do it! All it takes is attention to detail and hard work.
+**Pep talk:** Programming is really hard to learn, and it takes a massive effort to succeed. The good news is that you can do it! All it takes is attention to detail, hard work, and asking lots of questions.
 
 ## Pre-course
 
