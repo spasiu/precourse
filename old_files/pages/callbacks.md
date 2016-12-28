@@ -18,13 +18,13 @@ Before we get deeper into callbacks, lets talk about built-in functions that com
 
 - _setInterval_:
 
-    _Takes a callback function and the a number of milliseconds as arguments and executes the callback function every x milliseconds._
+    _Takes a callback function and the number of milliseconds as arguments and executes the callback function every x milliseconds._
 
     _**Example:**_ `setInterval(() => console.log(1), 1000)`
 
 - _setTimeout_:
 
-    _Takes a callback function and the a number of milliseconds as arguments and executes the callback once, x milliseconds after setTimeout was called._
+    _Takes a callback function and the number of milliseconds as arguments and executes the callback once, x milliseconds after setTimeout was called._
 
     _**Example:**_ `setTimeout(() => console.log(10), 10000)`
 

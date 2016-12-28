@@ -53,7 +53,7 @@ This time we only cut the pizza in four slices instead of the normal eight. Here
 
 ## WTF is going on here?
 
-This is a function `(area) => area / 8`. This is a variable declaration `let findAreaOfNormalPizzaSlice`. This is us declaring the variable and assigning the a function to it:
+This is a function `(area) => area / 8`. This is a variable declaration `let findAreaOfNormalPizzaSlice`. This is us declaring the variable and assigning the function to it:
 
 ```javascript
  let findAreaOfNormalPizzaSlice = (area) => area / 8

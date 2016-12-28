@@ -1,6 +1,6 @@
 # Recursive functions
 
-First read [this](/recursion-explained.html).
+First read [this](/js101/recursion-explained.html).
 
 I expect this module to stretch your mind and make you understand functions a little better. I don't expect you to suddenly master recursion.
 

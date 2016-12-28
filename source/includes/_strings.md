@@ -54,7 +54,8 @@ console.log(text)
 ```
 There's so much happening right now! We're **interpolating** numbers into our strings, the numbers are being automagically **coerced** into string data, then we're taking the two strings we've built and **concatenating** them with another string that's just an empty space using the mathematical **+** operator. Lastly, we're calling a built-in function called `console.log` and it's showing our string.
 
-_**The area of a circle is πr^2. So a 14" pizza has an area of 153.86".**_
+_**The area of a circle is πr^2.<br>So a 14" pizza has an area of 153.86".**_
+
 ![](https://media.giphy.com/media/Gd9vJCodapGpi/giphy.gif)
 
 <aside>
