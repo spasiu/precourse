@@ -1,0 +1,484 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Functions · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="callbacks.html" />
+    
+    
+    <link rel="prev" href="numbers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="tools.html">
+            
+                <a href="tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="numbers.html">
+            
+                <a href="numbers.html">
+            
+                    
+                    Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="callbacks.html">
+            
+                <a href="callbacks.html">
+            
+                    
+                    Callbacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="booleans.html">
+            
+                <a href="booleans.html">
+            
+                    
+                    Booleans
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="recursion.html">
+            
+                <a href="recursion.html">
+            
+                    
+                    Recursive Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="strings.html">
+            
+                <a href="strings.html">
+            
+                    
+                    Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arrays.html">
+            
+                <a href="arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="dictionaries.html">
+            
+                <a href="dictionaries.html">
+            
+                    
+                    Dictionaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="iterators.html">
+            
+                <a href="iterators.html">
+            
+                    
+                    Iterators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="objects.html">
+            
+                <a href="objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="prototypes.html">
+            
+                <a href="prototypes.html">
+            
+                    
+                    Prototypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Functions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="functions">Functions</h1>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/VhokQhjl5t0" frameborder="0" allowfullscreen></iframe></p>
+
+<p>The above video is part of a series of four from Khan Academy, you&apos;re welcome to watch as many of them as you like, but you should at least watch this one.</p>
+<h2 id="functions-in-javascript">Functions in JavaScript</h2>
+<p>So that was about functions in math, but it&apos;s the same in JavaScript. Let&apos;s create a function that tells us what the area of a pizza is based on its diameter:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> pi = <span class="hljs-number">3.14</span>
+
+<span class="hljs-keyword">let</span> findArea = (diameter) =&gt; diameter * diameter / <span class="hljs-number">4</span> * pi
+
+findArea(<span class="hljs-number">14</span>)
+</code></pre>
+<p>Let&apos;s enter that into the console:
+<img src="images/console-function.png" alt="console"></p>
+<p>Nice!</p>
+<p>Let&apos;s see how many square inches per slice:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> findAreaOfSlice = (area) =&gt; area / <span class="hljs-number">8</span>
+
+findAreaOfSlice(findArea(<span class="hljs-number">14</span>))
+</code></pre>
+<p>This time we passed the result of one function to another function.</p>
+<p>Let&apos;s try including one function in another:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> findAreaOfSliceFromDiameter = (diameter) =&gt; findArea(diameter) / <span class="hljs-number">8</span>
+
+findAreaOfSliceFromDiameter(<span class="hljs-number">14</span>)
+</code></pre>
+<p>As you can see they&apos;re just expressions, that we&apos;ve packaged up so that we can reuse them.</p>
+<p>Let&apos;s write a function with more then one <strong>parameter</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> findAreaOfCustomSlice = (diameter, slices) =&gt; findArea(diameter) / slices
+
+findAreaOfCustomSlice(<span class="hljs-number">14</span>)
+</code></pre>
+<p>This time we only cut the pizza in four slices instead of the normal eight. Heresy.</p>
+<h2 id="wtf-is-going-on-here">WTF is going on here?</h2>
+<p>This is a function <code>(area) =&gt; area / 8</code>. This is a variable declaration <code>let findAreaOfNormalPizzaSlice</code>. This is us declaring the variable and assigning the function to it:</p>
+<pre><code class="lang-javascript"> <span class="hljs-keyword">let</span> findAreaOfNormalPizzaSlice = (area) =&gt; area / <span class="hljs-number">8</span>
+</code></pre>
+<h2 id="the-anatomy-of-a-function-definition">The anatomy of a function definition</h2>
+<p><span style="font-size:1.5em"></span></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> findAreaOfSlice = (area) =&gt; area / <span class="hljs-number">8</span>
+</code></pre>
+<p><strong>let</strong> <em>functionName</em> <strong>=</strong> <strong>(</strong><em>parameters</em><strong>)</strong> <strong>=&gt;</strong> <em>body</em></p>
+<p>&lt;/span&gt;</p>
+<h2 id="the-anatomy-of-a-function-call">The anatomy of a function call</h2>
+<p><span style="font-size:1.5em"></span></p>
+<pre><code class="lang-javascript">findAreaOfSlice(<span class="hljs-number">154</span>)
+</code></pre>
+<p><em>functionName</em><strong>(</strong><em>arguments</em><strong>)</strong>
+&lt;/span&gt;</p>
+<h2 id="more-explaining-with-words">More explaining with words</h2>
+<p>The functions we&apos;ve been looking at are basically reusable expressions. When you declare a function you define its parameters between the parentheses, then when you call the function (<em>i.e.</em> use it), you pass it arguments whose values take the place of the parameters in the function definition. The function acts just like any other expression when called, it produces the value you&apos;d expect from the body of the function. So the function <code>let three = () =&gt; 3</code> would produce the value <code>3</code> when called like so <code>three()</code>.</p>
+<h2 id="something-freaky">Something freaky</h2>
+<p>You can call a function when you declare it without ever assigning it to a variable. You just wrap it in <strong>(</strong> parentheses <strong>)</strong> and then call it by adding the parentheses at the end: <code>(() =&gt; 3)()</code> produces the value <code>3</code>.</p>
+<h2 id="practice">Practice</h2>
+<p>Fill in the bodies of these function and declare and call them in the console.</p>
+<ul>
+<li><p>for example: <code>let add = (num1, num2) =&gt; num1 + num2</code></p>
+</li>
+<li><p><code>let subtract = (num1, num2) =&gt; ...</code></p>
+</li>
+<li><p><code>let multiply = (num1, num2) =&gt; ...</code></p>
+</li>
+<li><p><code>let divide = (num1, num2) =&gt; ...</code></p>
+</li>
+<li><p><code>let square = (num) =&gt; ...</code></p>
+</li>
+<li><p><code>let addTen = (num) =&gt; ...</code></p>
+</li>
+<li><p><code>let getArea = (diameter) =&gt; ...</code></p>
+</li>
+<li><p><code>let divideByEight = (num) =&gt; ...</code></p>
+</li>
+<li><p><code>let slicesPerPerson = (pizzas, people) =&gt; ...</code></p>
+</li>
+<li><p><code>let unusedSlices = (pizzas, people) =&gt; ...</code></p>
+</li>
+</ul>
+<p>Write the function definition for these calls.</p>
+<ul>
+<li><code>addOne(10)</code> produces <code>11</code></li>
+<li><code>multiplyBySeventeenAndAddThree(89)</code> produces <code>1516</code></li>
+</ul>
+<p>Write the following functions, test them in the console, and give them to someone to read!</p>
+<ul>
+<li><p>write a function that converts the diameter of a pizza into it&apos;s area</p>
+</li>
+<li><p>write a function that takes the diameter and price of a pizza and gives you the price per square inch of pizza</p>
+</li>
+<li><p>write a function that takes a sum of money and a monthly interest rate, and gives the amount of money gained in interest over a single month.</p>
+</li>
+</ul>
+<h2 id="read-this-even-though-its-not-about-javascript">Read this, even though it&apos;s not about JavaScript</h2>
+<ul>
+<li><a href="http://www.cs.utah.edu/~germain/PPS/Topics/functions.html" target="_blank">Functions</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="numbers.html" class="navigation navigation-prev " aria-label="Previous page: Numbers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="callbacks.html" class="navigation navigation-next " aria-label="Next page: Callbacks">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Functions","level":"1.4","depth":1,"next":{"title":"Callbacks","level":"1.5","depth":1,"path":"callbacks.md","ref":"callbacks.md","articles":[]},"previous":{"title":"Numbers","level":"1.3","depth":1,"path":"numbers.md","ref":"numbers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"functions.md","mtime":"2016-12-29T21:42:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-29T22:49:13.508Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,551 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Recursive Functions · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="strings.html" />
+    
+    
+    <link rel="prev" href="booleans.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="tools.html">
+            
+                <a href="tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="numbers.html">
+            
+                <a href="numbers.html">
+            
+                    
+                    Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="callbacks.html">
+            
+                <a href="callbacks.html">
+            
+                    
+                    Callbacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="booleans.html">
+            
+                <a href="booleans.html">
+            
+                    
+                    Booleans
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="recursion.html">
+            
+                <a href="recursion.html">
+            
+                    
+                    Recursive Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="strings.html">
+            
+                <a href="strings.html">
+            
+                    
+                    Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arrays.html">
+            
+                <a href="arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="dictionaries.html">
+            
+                <a href="dictionaries.html">
+            
+                    
+                    Dictionaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="iterators.html">
+            
+                <a href="iterators.html">
+            
+                    
+                    Iterators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="objects.html">
+            
+                <a href="objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="prototypes.html">
+            
+                <a href="prototypes.html">
+            
+                    
+                    Prototypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Recursive Functions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="recursive-functions">Recursive functions</h1>
+<p><img src="http://img1.joyreactor.com/pics/post/gif-coffee-recursion-951031.gif" alt=""></p>
+<p><img src="http://31.media.tumblr.com/tumblr_ldpq5w5xgx1qfzuo6o1_500.png" alt=""></p>
+<p><img src="https://www.explainxkcd.com/wiki/images/8/82/tabletop_roleplaying.png" alt=""></p>
+<p>I expect this module to stretch your mind and make you understand functions a little better. I don&apos;t expect you to suddenly master recursion.</p>
+<h2 id="functions-calling-other-functions">Functions calling other functions</h2>
+<p>We know that functions can call other functions inside their body, like:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> pi = <span class="hljs-number">3.14</span>
+
+<span class="hljs-keyword">let</span> findArea = (diameter) =&gt; diameter * diameter / <span class="hljs-number">4</span> * pi
+
+<span class="hljs-keyword">let</span> findAreaOfSliceFromDiameter = (diameter) =&gt; findArea(diameter) / <span class="hljs-number">8</span>
+
+findAreaOfSliceFromDiameter(<span class="hljs-number">14</span>)
+</code></pre>
+<p>In the above example we find the area of a slice of pizza based on the diameter of the pizza. Each slice of a 14&quot; pizza holds roughly 19 square inches of pizza. We discover this by defining a function <code>findArea</code> that we call from <code>findAreaOfSliceFromDiameter</code> with the <em>diameter</em> parameter.</p>
+<p>Recursion isn&apos;t a new kind of syntax, it&apos;s just the idea that a function can call itself over and over again, until it finds the answer we want it to.</p>
+<p>We do this because often we&apos;re not smart enough to solve a problem with a single expression, and because it allows us to apply a set of rules to a problem over and over again, slightly modified each time, until the problem is solved.</p>
+<p>We can use recursion to iterate through our expression again and again, for example:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// compound interest calculator</span>
+<span class="hljs-comment">// calculate compounded interest over time</span>
+<span class="hljs-keyword">let</span> calc = (rate, sum, time) =&gt; time &gt; <span class="hljs-number">0</span> ? calc(rate, sum + sum * rate, time - <span class="hljs-number">1</span>) : sum
+</code></pre>
+<aside>
+FYI you can solve this problem with a single <a href="https://qrc.depaul.edu/StudyGuide2009/Notes/Savings%20Accounts/Compound%20Interest.htm" target="_blank">expression</a>, without needing to iterate.
+I just think it&apos;s an easy to understand problem.
+</aside>
+
+
+<p>That function was a mouthful, so lets split it into a few lines</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// we split the expression in the function&apos;s body over three lines.</span>
+calc = (rate, sum, time) =&gt; time &gt; <span class="hljs-number">0</span> ? <span class="hljs-comment">// is time greater than 0?</span>
+
+    calc(rate, sum + sum * rate, time - <span class="hljs-number">1</span>) : <span class="hljs-comment">// if yes, then recurse,</span>
+
+    sum <span class="hljs-comment">// otherwise, return the sum.</span>
+</code></pre>
+<p>So what&apos;s happening?</p>
+<p>We declare <code>calc</code> with three parameters, the interest rate for a period (<em>rate</em>), the starting sum (<em>sum</em>), and the number of periods to compound (<em>time</em>). We check if time is zero, and if it is we return the sum we have calculated thus far. If time is greater then zero, we iterate again, adding the interest to the sum, and reducing the time left by 1.</p>
+<h2 id="another-example-rabbits">Another example, rabbits</h2>
+<p>Let us assume that a single pair of rabbits, in the wild, can produce 25 breeding pairs of rabbits in a single year (even with high mortality, old age, and predation). We want to figure out how many pairs of rabbits there are after X years.</p>
+<p>That seems like a lot of stuff to pack into one function. Good thing we can actually write functions with statements inside of them!</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> rabbitCalc = (years, pairs=<span class="hljs-number">1</span>) =&gt; {
+    <span class="hljs-comment">// function body</span>
+}
+</code></pre>
+<p>We just introduced a couple new things here:</p>
+<ol>
+<li><p><code>pairs=1</code>: We defined a function parameter called <em>pairs</em>, but we said that it equals <em>1</em>. We&apos;ve given the second parameter of our function a default value of <code>1</code>. So now we can call <code>rabbitCalc(10)</code>, and it will be like calling <code>rabbitCalc(10, 1)</code>, but we can override the default value by calling <code>rabbitCalc(10, 2)</code> so now pairs is <code>2</code> instead of the default <code>1</code>.</p>
+</li>
+<li><p>We used these things <strong>{</strong> <strong>}</strong> to define the body of our function. Now our function does whatever we tell it to between those <em>curly brackets</em>. We can write multiple statements, and when we&apos;re ready for our function to return a value, we just use the key word, <code>return</code>.</p>
+</li>
+</ol>
+<p>Here&apos;s how to use that fancy new function body with a <em>return</em> statement.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> rabbitCalc = (years, pairs=<span class="hljs-number">1</span>) =&gt; {
+    <span class="hljs-keyword">let</span> nextGeneration = pairs * <span class="hljs-number">25</span>
+
+    <span class="hljs-keyword">return</span> nextGeneration
+}
+</code></pre>
+<p>OK, so we&apos;re just calculating a single generation of rabbits right now. Let&apos;s add the recursion part.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> rabbitCalc = (years, pairs=<span class="hljs-number">1</span>) =&gt; {
+    <span class="hljs-keyword">let</span> generation = pairs * <span class="hljs-number">25</span>
+    <span class="hljs-keyword">return</span> years &gt; <span class="hljs-number">1</span> ?
+        rabbitCalc(years - <span class="hljs-number">1</span>, generation) :
+        generation
+}
+</code></pre>
+<p>There&apos;s still something that&apos;s a bit hard to understand here:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">return</span> years &gt; <span class="hljs-number">1</span> ?
+    rabbitCalc(years - <span class="hljs-number">1</span>, generation) :
+    generation
+</code></pre>
+<p>Let&apos;s introduce another kind of statement called <code>if</code>.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> rabbitCalc = (years, pairs=<span class="hljs-number">1</span>) =&gt; {
+    <span class="hljs-keyword">if</span> (years &lt; <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> pairs
+    }
+
+    <span class="hljs-keyword">return</span> rabbitCalc(years - <span class="hljs-number">1</span>, pairs * <span class="hljs-number">25</span>)
+}
+</code></pre>
+<p>A couple things to understand here:</p>
+<ol>
+<li><p>The <em>if</em> statement uses curly brackets again to execute everything in its body <strong>{</strong> <strong>}</strong> if the boolean in the parentheses <strong>(</strong> <strong>)</strong> is <em>true</em>.</p>
+</li>
+<li><p><code>return</code> only happens once per function call, so if the <em>return</em> statement inside the <em>if</em> statement executes, then the function is over, and it never looks for the 2nd <em>return</em> statement below.</p>
+</li>
+</ol>
+<h2 id="the-anatomy-of-an-if-statement">The anatomy of an if statement</h2>
+<p><span style="font-size:1.5em"></span></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (years &lt; <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">return</span> pairs
+}
+</code></pre>
+<p><strong>if</strong> <strong>(</strong><em>boolean</em><strong>)</strong> <strong>{</strong><br>
+<span style="margin-left:2em;"><em>body</em></span><br>
+<strong>}</strong></p>
+<p>&lt;/span&gt;</p>
+<h2 id="summary">Summary</h2>
+<p>Recursion is awesome. In the interest of learning we&apos;ve picked examples that focus on numbers because we know how to do math in JavaScript, but where recursion is really helpful is in allowing us to iterate over nested data structures, something we will do during our course. It&apos;s definitely worth being exposed to.</p>
+<p>We&apos;ve also learned to use if statements, and functions with return statements. These are powerful tools. Keeping everything in a single expression makes it easier to write code without bugs (mistakes), but it also makes it harder to read and write longer functions.</p>
+<h2 id="break-time">Break time</h2>
+<p><img src="https://media.giphy.com/media/M5KFysE4oqmLm/giphy.gif" alt="story time"></p>
+<h2 id="more-examples">More examples</h2>
+<pre><code class="lang-javascript"><span class="hljs-comment">// positive powers</span>
+<span class="hljs-keyword">let</span> toPowerOf = (num, power) =&gt; power &gt; <span class="hljs-number">0</span> ?
+    toPowerOf(num * <span class="hljs-number">10</span>, power - <span class="hljs-number">1</span>) :
+    num
+
+<span class="hljs-comment">// FYI you can just do power like this:</span>
+<span class="hljs-number">1e5</span> <span class="hljs-comment">// one to the power of five</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// factorial</span>
+<span class="hljs-keyword">let</span> fact = (n) =&gt; n &gt; <span class="hljs-number">1</span> ? n * fact(n - <span class="hljs-number">1</span>) : <span class="hljs-number">1</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// compute dimensions</span>
+<span class="hljs-keyword">let</span> dims = (number, dimensions, value=number) =&gt; {
+    <span class="hljs-keyword">if</span> (dimensions === <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+    }
+
+    <span class="hljs-keyword">if</span> (dimensions === <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> value
+    }
+
+    <span class="hljs-keyword">return</span> dims(number, dimensions - <span class="hljs-number">1</span>, value * number)
+}
+
+<span class="hljs-comment">// FYI you can just do dimensions like this:</span>
+<span class="hljs-number">2</span>**<span class="hljs-number">2</span> <span class="hljs-comment">// two squared</span>
+</code></pre>
+<p>Oh hey, this one isn&apos;t recursive at all, because you need a break:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> findAreaOfSliceFromDiameter = (diameter) =&gt; {
+    <span class="hljs-keyword">let</span> pi = <span class="hljs-number">3.14</span>
+    <span class="hljs-keyword">let</span> findArea = (d) =&gt; d * d / <span class="hljs-number">4</span> * pi
+    <span class="hljs-keyword">return</span> findArea(diameter) / <span class="hljs-number">8</span>
+}
+</code></pre>
+<p>Study that last one, it&apos;s not recursive, but does it make sense to you?
+We nested a function declaration inside another function, neat huh?
+How about the names of the parameters in the nested function? Does that clarify the way that parameters work?</p>
+<h2 id="practice">Practice</h2>
+<ol>
+<li><p>Rewrite this:</p>
+<pre><code class="lang-javascript"> <span class="hljs-keyword">let</span> calc = (rate, sum, time) =&gt; time &gt; <span class="hljs-number">0</span> ? calc(rate, sum + sum * rate, time - <span class="hljs-number">1</span>) : sum
+</code></pre>
+<p> As a multi-statement function, with <em>if</em> statements instead of a ternary operator (<em>boolean</em> <strong>?</strong> <em>then</em> <strong>:</strong> <em>else</em>).</p>
+</li>
+<li><p>Rewrite all the functions you have previously seen and written in our other homework using the new syntax.</p>
+<p> For example:</p>
+<pre><code class="lang-javascript"> <span class="hljs-keyword">let</span> f = (x) =&gt; x + <span class="hljs-number">1</span>
+</code></pre>
+<p> becomes:</p>
+<pre><code class="lang-javascript"> <span class="hljs-keyword">let</span> f = (x) =&gt; {
+     <span class="hljs-keyword">return</span> x + <span class="hljs-number">1</span>
+ }
+</code></pre>
+</li>
+<li><p>Think up your own recursive function. It doesn&apos;t have to be amazing. Write it in any syntax you like.</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="booleans.html" class="navigation navigation-prev " aria-label="Previous page: Booleans">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="strings.html" class="navigation navigation-next " aria-label="Next page: Strings">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Recursive Functions","level":"1.7","depth":1,"next":{"title":"Strings","level":"1.8","depth":1,"path":"strings.md","ref":"strings.md","articles":[]},"previous":{"title":"Booleans","level":"1.6","depth":1,"path":"booleans.md","ref":"booleans.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recursion.md","mtime":"2016-12-29T22:04:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-29T22:49:13.508Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

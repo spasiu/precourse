@@ -1,0 +1,532 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Callbacks · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="booleans.html" />
+    
+    
+    <link rel="prev" href="functions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="tools.html">
+            
+                <a href="tools.html">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="numbers.html">
+            
+                <a href="numbers.html">
+            
+                    
+                    Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="callbacks.html">
+            
+                <a href="callbacks.html">
+            
+                    
+                    Callbacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="booleans.html">
+            
+                <a href="booleans.html">
+            
+                    
+                    Booleans
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="recursion.html">
+            
+                <a href="recursion.html">
+            
+                    
+                    Recursive Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="strings.html">
+            
+                <a href="strings.html">
+            
+                    
+                    Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arrays.html">
+            
+                <a href="arrays.html">
+            
+                    
+                    Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="dictionaries.html">
+            
+                <a href="dictionaries.html">
+            
+                    
+                    Dictionaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="iterators.html">
+            
+                <a href="iterators.html">
+            
+                    
+                    Iterators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="objects.html">
+            
+                <a href="objects.html">
+            
+                    
+                    Objects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="prototypes.html">
+            
+                <a href="prototypes.html">
+            
+                    
+                    Prototypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Callbacks</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="callbacks">Callbacks</h1>
+<p>Callbacks are very simple. A callback is a function whose job is to execute when some event occurs. Here are a few use cases:</p>
+<ul>
+<li><p><em>I was asked to wait for the user to click on a button, and they just clicked on the button, what do I do now?</em></p>
+</li>
+<li><p><em>I made an HTTP request to a server, and now I have the response, what do I do now?</em></p>
+</li>
+<li><p><em>I looked for a file on disk and I just found it, what do I do now?</em></p>
+</li>
+<li><p><em>You said to wait for 30 seconds, well 30 seconds are over, what do I so now?</em></p>
+</li>
+</ul>
+<p>You define the answer to &quot;what do I do now?&quot; by declaring a callback function. A callback function is just a regular function, but you&apos;re passing it as an argument to another function that&apos;s going to decode when the best time for it to be called is.</p>
+<h2 id="a-few-built-in-functions">A few built-in functions</h2>
+<p>Before we get deeper into callbacks, lets talk about built-in functions that come with the browser. Here are a few:</p>
+<ul>
+<li><p><em>setInterval</em>:</p>
+<p>  <em>Takes a callback function and the number of milliseconds as arguments and executes the callback function every x milliseconds.</em></p>
+<p>  <em><strong>Example:</strong></em> <code>setInterval(() =&gt; console.log(1), 1000)</code></p>
+</li>
+<li><p><em>setTimeout</em>:</p>
+<p>  <em>Takes a callback function and the number of milliseconds as arguments and executes the callback once, x milliseconds after setTimeout was called.</em></p>
+<p>  <em><strong>Example:</strong></em> <code>setTimeout(() =&gt; console.log(10), 10000)</code></p>
+</li>
+<li><p><em>Math.random</em>:</p>
+<p>  <em>Takes no arguments, and returns a random number between 0 and 1 (not inclusive of 1).</em></p>
+<p>  <em><strong>Example:</strong></em> <code>Math.random()</code></p>
+</li>
+<li><p><em>Math.floor</em>:</p>
+<p>  <em>Take a number as an argument and rounds a decimal number down to a whole integer. So 1.87 becomes 1.</em></p>
+<p>  <em><strong>Example:</strong></em> <code>Math.floor(Math.random() * 6)</code></p>
+</li>
+<li><p><em>console.log</em>:</p>
+<p>  <em>Takes any number of arguments and logs them to the console.</em></p>
+<p>  <em><strong>Example:</strong></em> <code>console.log(1,2,3)</code></p>
+</li>
+<li><p><em>alert</em>:</p>
+<p>  <em>Takes an argument and opens an alert box in the browser with the argument as a message. Very annoying.</em></p>
+<p>  <em><strong>Example:</strong></em> <code>alert(1)</code></p>
+</li>
+</ul>
+<h2 id="an-example">An example</h2>
+<p>Try this in the console:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">let</span> incrementCount = () =&gt; count = count + <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">let</span> interval = setInterval(incrementCount, <span class="hljs-number">1000</span>)
+</code></pre>
+<p>After you run that in the console try checking the <code>count</code> variable a few times (just evaluate <code>count</code> in the console to check its value).</p>
+<p>You&apos;ll notice that count is being incremented. It&apos;s counting up, one second at a time.</p>
+<p>So let&apos;s look more closely at what&apos;s happening here:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// we&apos;re declaring a variable called count</span>
+<span class="hljs-comment">// and assigning it the number 0 as a value.</span>
+
+<span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>
+
+<span class="hljs-comment">// We&apos;re declaring a function, that when called</span>
+<span class="hljs-comment">// will add one to the count variable.</span>
+
+<span class="hljs-keyword">let</span> incrementCount = () =&gt; count = count + <span class="hljs-number">1</span>
+
+<span class="hljs-comment">// we&apos;re calling a function &apos;setInterval&apos;,</span>
+<span class="hljs-comment">// which takes a function and a number of milliseconds,</span>
+<span class="hljs-comment">// and then calls that function every x milliseconds.</span>
+
+<span class="hljs-keyword">let</span> interval = setInterval(incrementCount, <span class="hljs-number">1000</span>)
+</code></pre>
+<aside>
+Notice this <b>//</b>? That&apos;s called a comment. Comments aren&apos;t evaluated, they just let you say interesting things about your code.
+</aside>
+
+<p>So now we have a count of the seconds since you ran that <code>setInterval</code> function.</p>
+<p><img src="images/console-interval.png" alt="console"></p>
+<p>OK, lets try stopping the count. There&apos;s another built-in function called <code>clearInterval</code>. It takes an interval as an argument and stops it.</p>
+<p>Remember how above we assigned our setInterval call to a variable called <code>interval</code>?</p>
+<p>We did that so we could do this:</p>
+<pre><code class="lang-javascript">clearInterval(interval)
+</code></pre>
+<p>Now if you try and check the count, you&apos;ll see that its not incrementing any more.</p>
+<h2 id="another-example">Another example</h2>
+<p>Let&apos;s model pizza consumption with time. Refresh your console and run this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> pizzas = <span class="hljs-number">12</span>
+<span class="hljs-keyword">let</span> people = <span class="hljs-number">15</span>
+<span class="hljs-keyword">let</span> slicesPerPersonPerMinute = <span class="hljs-number">1</span>/<span class="hljs-number">2</span>
+<span class="hljs-keyword">let</span> pretendMinute = <span class="hljs-number">1000</span>
+
+<span class="hljs-keyword">let</span> consume = () =&gt; pizzas = pizzas - people * slicesPerPersonPerMinute / <span class="hljs-number">8</span>
+
+<span class="hljs-keyword">let</span> interval = setInterval(consume, pretendMinute)
+</code></pre>
+<p>Once we run this code we can periodically check the value of <code>pizzas</code> and watch it dwindle until it becomes negative pizza.</p>
+<p>Try calling <code>clearInterval(interval)</code> before you get too negative pizza. We can only assume that negative pizza means people have started to eat each other.</p>
+<h2 id="settimeout">setTimeout</h2>
+<p><em>setTimeout</em> does the exact same thing as set interval, but only once.</p>
+<p>Let&apos;s run some code in the console with the <code>setTimeout</code> function and another built-in function, alert.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> count = <span class="hljs-number">10</span>
+<span class="hljs-keyword">let</span> decrement = () =&gt; count = count - <span class="hljs-number">1</span>
+<span class="hljs-keyword">let</span> interval = setInterval(decrement, <span class="hljs-number">1000</span>)
+
+<span class="hljs-keyword">let</span> sayZero = () =&gt; alert(count)
+
+setTimeout(sayZero, <span class="hljs-number">10000</span>)
+</code></pre>
+<h2 id="practice">Practice</h2>
+<p>Model personal finances with time! This is a pretty open ended exercise, and you can get as deep as you like. Go nuts. I&apos;d write it all in a text editor, then paste it into the console to test it.</p>
+<ol>
+<li>Create variables and functions that model expenses and revenue streams.</li>
+<li>Declare intervals that run your functions at a scale of 3 seconds per month.</li>
+<li>Declare an interval to log your finances every week or month.</li>
+<li>stop your model after some number of years (I chose 2).</li>
+</ol>
+<p>Here&apos;s a really lightweight example to get you started:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span> <span class="hljs-comment">// months</span>
+
+<span class="hljs-keyword">let</span> month = <span class="hljs-number">3000</span> <span class="hljs-comment">// milliseconds</span>
+
+<span class="hljs-keyword">let</span> stopTime = month * <span class="hljs-number">24</span> <span class="hljs-comment">// i.e. 2 years</span>
+
+<span class="hljs-keyword">let</span> balance = <span class="hljs-number">1000</span> <span class="hljs-comment">// dollars</span>
+
+<span class="hljs-keyword">let</span> rent = <span class="hljs-number">700</span> <span class="hljs-comment">// dollars</span>
+
+<span class="hljs-keyword">let</span> pay = <span class="hljs-number">2000</span> <span class="hljs-comment">// dollars</span>
+
+<span class="hljs-keyword">let</span> payRent = () =&gt; balance = balance - rent
+
+<span class="hljs-keyword">let</span> getPay = () =&gt; balance = balance + pay
+
+<span class="hljs-keyword">let</span> increment = () =&gt; count = count + <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">let</span> showBalance = () =&gt; <span class="hljs-built_in">console</span>.log(count, balance)
+
+<span class="hljs-keyword">let</span> rentInterval = setInterval(payRent, month)
+<span class="hljs-keyword">let</span> payInterval = setInterval(getPay, month)
+<span class="hljs-keyword">let</span> incrementInterval = setInterval(increment, month)
+<span class="hljs-keyword">let</span> showInterval = setInterval(showBalance, month)
+
+setTimeout(() =&gt; clearInterval(rentInterval), stopTime)
+setTimeout(() =&gt; clearInterval(payInterval), stopTime)
+setTimeout(() =&gt; clearInterval(incrementInterval), stopTime)
+</code></pre>
+<p>In your exercise I&apos;d say that you should model at least 10 different expenses. Get creative. Do the logs make sense when you run your simulation?</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="functions.html" class="navigation navigation-prev " aria-label="Previous page: Functions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="booleans.html" class="navigation navigation-next " aria-label="Next page: Booleans">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Callbacks","level":"1.5","depth":1,"next":{"title":"Booleans","level":"1.6","depth":1,"path":"booleans.md","ref":"booleans.md","articles":[]},"previous":{"title":"Functions","level":"1.4","depth":1,"path":"functions.md","ref":"functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"callbacks.md","mtime":"2016-12-29T21:42:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-29T22:49:13.508Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
