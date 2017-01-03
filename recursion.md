@@ -24,8 +24,6 @@ findAreaOfSliceFromDiameter(14)
 
 In the above example we find the area of a slice of pizza based on the diameter of the pizza. Each slice of a 14" pizza holds roughly 19 square inches of pizza. We discover this by defining a function `findArea` that we call from `findAreaOfSliceFromDiameter` with the _diameter_ parameter.
 
-
-
 Recursion isn't a new kind of syntax, it's just the idea that a function can call itself over and over again, until it finds the answer we want it to.
 
 We do this because often we're not smart enough to solve a problem with a single expression, and because it allows us to apply a set of rules to a problem over and over again, slightly modified each time, until the problem is solved.

@@ -1,0 +1,9 @@
+aside {
+    border-radius: 3px;
+    background-color: #e5e5e5;
+    font-size: .9em !important;
+    font-style: italic;
+    padding: .25em .25em .25em .75em;
+    margin: 1em 0;
+    width: 90%;
+}
