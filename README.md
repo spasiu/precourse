@@ -10,7 +10,11 @@ You should go through each of the pages in sequence, and:
 4. solve the practice problems
 5. ask lots of questions
 
-It's entirely possible that this document will not be enough for you if you're new to programming. That's why we've included a number of suggested resources to supplement this document. Pick one and do it alongside this course.
+It's entirely possible that this document will not be enough for you if you're new to programming. That's why we've included a number of [suggested resources](#suggested-resources) to supplement this document. Pick one and do it alongside this course.
+
+## JS101 precourse
+
+If you're completing this course as the pre-work for JS101, you just need to **try** and get as far as the [Objects](objects.md) section! Make sure to send your answers to the exercises and practice problems to your instructor, and ask lots of questions.
 
 ## Pep talk
 
