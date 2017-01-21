@@ -1,0 +1,10 @@
+body {
+    padding: 1em;
+}
+.problem {
+    width: 600px;
+    height: 200px;
+}
+.feedback {
+  margin-top: 1em;
+}
