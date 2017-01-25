@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paragraphs</title>
+</head>
+<body>
+    <p>In theory, theory and practice are the same. In practice, they’re not.</p>
+    <p>Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.</p>
+    <p>I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone.</p>
+    <script>
+    function getParas(index) {
+        const paras = document.getElementsByTagName('p');
+        if (index) {
+            return paras[index];
+        }
+        return paras;
+    }
+
+    function setPara(index, content) {
+        const paras = document.getElementsByTagName('p');
+        paras[index].innerTex = content;
+    }
+
+    function split(string) {
+        return string.split(' ')
+    }
+
+    function contains(string, search) {
+        return string.indexOf(search) !== -1;
+    }
+
+    function push(arr, item) {
+        return arr.push(item);
+    }
+    </script>
+</body>
+</html>
