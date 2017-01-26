@@ -11,15 +11,16 @@
     <script>
     function getParas(index) {
         const paras = document.getElementsByTagName('p');
-        if (index) {
-            return paras[index];
+        const texts = [];
+        for (const para of paras) {
+            texts.push(para.innerText);
         }
-        return paras;
+        return texts;
     }
 
     function setPara(index, content) {
         const paras = document.getElementsByTagName('p');
-        paras[index].innerTex = content;
+        paras[index].innerText = content;
     }
 
     function split(string) {
